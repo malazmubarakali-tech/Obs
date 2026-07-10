@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة انفصال المشيمة المبكر | Abruptio Placenta Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">😡🩸💔</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة انفصال المشيمة المبكر</h1>
+  <p>Abruptio Placenta · بكالوريوس التمريض - الدفعة الأولى 💔</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد الشخصيات الثلاث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎭</div>
+    "الآن وصلنا إلى المحاضرة التي تجعل كل شيء يترابط.
+  </div>
+  <div class="card">
+    <p>تذكري أن عندك الآن شخصيتين:</p>
+    <p style="margin-top:10px;">🩷 <strong>Placenta Previa</strong> = "أنا جلست عند الباب."</p>
+    <p>❤️ <strong>Placenta Accreta</strong> = "أنا حفرت داخل الجدار."</p>
+    <p style="margin-top:14px;">والآن تدخل الشخصية الثالثة...</p>
+    <p style="font-size:18px; font-weight:900; color:#dc2626;">😡 Abruptio Placenta</p>
+    <p style="font-weight:700;">"المشيمة التي قررت أن تترك البيت قبل انتهاء العقد."</p>
+  </div>
+
+  <!-- الفصل الأول: ماذا حدث؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🎬</div>
+    🎬 الفصل الأول: ماذا حدث؟
+  </div>
+  <div class="card">
+    <p>في الحمل الطبيعي...</p>
+    <p>المشيمة ثابتة.</p>
+    <p>تعطي الطفل:</p>
+    <p>❤️ Oxygen</p>
+    <p>🍔 Food</p>
+    <p>🩸 Blood</p>
+    <p style="margin-top:12px;">كل شيء جميل.</p>
+    <p>لكن فجأة...</p>
+    <p>المشيمة تقول:</p>
+    <p style="font-weight:700;">"أنا راحلة."</p>
+    <p style="margin-top:12px;">وتنفصل...</p>
+    <p>قبل ولادة الطفل.</p>
+    <p>وهنا تكمن الكارثة.</p>
+  </div>
+
+  <!-- التعريف -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🌸</div>
+    🌸 التعريف
+  </div>
+  <div class="card">
+    <p>لا تحفظيه.</p>
+    <p>افهميه.</p>
+    <p style="font-weight:700;">Placenta separates before delivery of the fetus.</p>
+    <p style="margin-top:12px;">الكلمة السحرية هنا هي:</p>
+    <p>⭐ <strong>BEFORE DELIVERY</strong></p>
+    <p style="margin-top:12px;">لأن بعد الولادة طبيعي أن تنفصل.</p>
+    <p>أما هنا...</p>
+    <p>فهي استعجلت. 😑</p>
+  </div>
+
+  <!-- الفصل الثاني: ماذا يحدث بعد الانفصال؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🎬</div>
+    🎬 الفصل الثاني: ماذا يحدث بعد الانفصال؟
+  </div>
+  <div class="card">
+    <p>تخيلي أن عندك شجرة.</p>
+    <p>🌳</p>
+    <p>والطفل يعيش من جذورها.</p>
+    <p>إذا اقتلعتِ الجذور...</p>
+    <p>ماذا سيحدث؟</p>
+    <p>❌ الماء لن يصل.</p>
+    <p>❌ الغذاء لن يصل.</p>
+    <p>❌ الأكسجين لن يصل.</p>
+    <p style="margin-top:12px;">ولهذا...</p>
+    <p>المشكلة ليست فقط النزيف.</p>
+    <p>بل:</p>
+    <p>👶 الطفل يختنق.</p>
+  </div>
+
+  <!-- Pathophysiology -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🌸</div>
+    🌸 Pathophysiology
+  </div>
+  <div class="card">
+    <p>بدل حفظ القائمة...</p>
+    <p>احفظي الفيلم.</p>
+    <p style="margin-top:12px;">Placenta separates</p>
+    <p>⬇</p>
+    <p>🩸 يبدأ النزيف.</p>
+    <p>⬇</p>
+    <p>الدم يتجمع خلف المشيمة.</p>
+    <p>⬇</p>
+    <p>يضغط أكثر.</p>
+    <p>⬇</p>
+    <p>تنفصل أكثر.</p>
+    <p>⬇</p>
+    <p>الطفل يحصل على أكسجين أقل.</p>
+    <p>⬇</p>
+    <p>Hypoxia.</p>
+    <p>⬇</p>
+    <p>قد يموت.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>الأم أيضًا قد تدخل</p>
+    <p>Shock</p>
+    <p>أو</p>
+    <p>DIC.</p>
+    <p style="margin-top:12px;">كلها سلسلة واحدة.</p>
+  </div>
+
+  <!-- لماذا يحدث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🌸</div>
+    🌸 لماذا يحدث؟
+  </div>
+  <div class="card">
+    <p>السؤال الأهم.</p>
+    <p>ما أكثر سبب يجعل المشيمة تنفصل؟</p>
+    <p style="margin-top:12px;">🥇 <strong>Hypertension.</strong></p>
+    <p>احفظيه.</p>
+    <p>هو الملك هنا.</p>
+    <p style="margin-top:12px;">ثم يأتي بعده:</p>
+    <p>🚗 Trauma.</p>
+    <p>🚬 Smoking.</p>
+    <p>💊 Cocaine.</p>
+    <p>💧 PROM.</p>
+    <p>👵 Age >35.</p>
+    <p>👶 Twins.</p>
+  </div>
+
+  <!-- كيف تأتي المريضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🌸</div>
+    🌸 كيف تأتي المريضة؟
+  </div>
+  <div class="card">
+    <p>هذا أكثر سؤال يتكرر.</p>
+    <p style="margin-top:12px;">أول شيء...</p>
+    <p>هل تشعر بألم؟</p>
+    <p>الإجابة...</p>
+    <p>😭 نعم.</p>
+    <p>بل ألم شديد ومستمر.</p>
+    <p style="margin-top:12px;">وهنا أول فرق عن Placenta Previa.</p>
+    <p style="margin-top:14px;">ثم...</p>
+    <p>الرحم يصبح</p>
+    <p>🪨 <strong>Rigid.</strong></p>
+    <p>ليس لينًا.</p>
+    <p>بل كأنه حجر.</p>
+    <p style="margin-top:14px;">ثم...</p>
+    <p>قد يوجد نزيف.</p>
+    <p>لكن...</p>
+    <p>⚠ ليس دائمًا.</p>
+    <p style="margin-top:12px;">وهذه نقطة يحبها الدكتور جدًا.</p>
+    <p>قد يكون الدم:</p>
+    <p>🩸 <strong>Revealed</strong></p>
+    <p>(ظاهر)</p>
+    <p>أو</p>
+    <p>🫣 <strong>Concealed</strong></p>
+    <p>(مختبئ خلف المشيمة).</p>
+    <p style="margin-top:12px;">يعني...</p>
+    <p>قد تكون الأم تنزف داخليًا دون أن ترى دمًا كثيرًا.</p>
+  </div>
+
+  <!-- الطفل -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🌸</div>
+    🌸 الطفل
+  </div>
+  <div class="card">
+    <p>ماذا يشعر؟</p>
+    <p>الأكسجين يقل.</p>
+    <p>فتبدأ:</p>
+    <p>👶 حركة الطفل تقل.</p>
+    <p>ثم...</p>
+    <p>FHR يصبح غير طبيعي.</p>
+  </div>
+
+  <!-- الفحوصات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🌸</div>
+    🌸 الفحوصات
+  </div>
+  <div class="card">
+    <p>اسألي نفسك.</p>
+    <p>ما الذي أخاف منه؟</p>
+    <p>🩸 النزيف.</p>
+    <p style="margin-top:12px;">إذن سأطلب:</p>
+    <p>CBC</p>
+    <p>Coagulation profile</p>
+    <p>Blood group</p>
+    <p>Crossmatch</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>CTG</p>
+    <p>لمراقبة الطفل.</p>
+    <p style="margin-top:12px;">أما Ultrasound...</p>
+    <p>يساعد...</p>
+    <p>لكن قد لا يظهر الحالة.</p>
+    <p>وهذه نقطة امتحانية.</p>
+  </div>
+
+  <!-- العلاج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🌸</div>
+    🌸 العلاج
+  </div>
+  <div class="card">
+    <p>يعتمد على سؤال واحد.</p>
+    <p>هل الحالة Mild؟</p>
+    <p>أم Severe؟</p>
+    <p style="margin-top:14px;">🟢 <strong>Mild</strong></p>
+    <p>راحة.</p>
+    <p>IV fluids.</p>
+    <p>Monitoring.</p>
+    <p style="margin-top:14px;">🔴 <strong>Severe</strong></p>
+    <p>🚑 Emergency CS.</p>
+    <p>🩸 Blood.</p>
+    <p>💨 Oxygen.</p>
+    <p>Shock treatment.</p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#7f1d1d);">🌸</div>
+    🌸 المضاعفات
+  </div>
+  <div class="card">
+    <p>كلها نتيجة لنقص الدم.</p>
+    <p style="margin-top:12px;"><strong>للأم:</strong></p>
+    <p>🩸 Hemorrhage.</p>
+    <p>⚠ Shock.</p>
+    <p>🧬 DIC.</p>
+    <p>🫘 Renal failure.</p>
+    <p style="margin-top:12px;"><strong>للطفل:</strong></p>
+    <p>💔 Hypoxia.</p>
+    <p>☠ Death.</p>
+    <p>👶 Prematurity.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Nursing Management -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    👩‍⚕️ Nursing Management
+  </div>
+  <div class="card">
+    <p>تخيلي أنك دخلت الغرفة.</p>
+    <p>ما أول شيء ستفعلينه؟</p>
+    <p>ليس الدواء.</p>
+    <p>بل...</p>
+    <p>🚨 <strong>ABC.</strong></p>
+    <p style="margin-top:12px;">ثم:</p>
+    <p>❤️ Vital signs.</p>
+    <p>🩸 كمية النزيف.</p>
+    <p>😖 شدة الألم.</p>
+    <p>🪨 هل الرحم متيبس؟</p>
+    <p>👶 FHR.</p>
+    <p>🧠 مستوى الوعي.</p>
+    <p style="margin-top:12px;">ثم تبدأين العلاج.</p>
+  </div>
+
+  <!-- التنفيذ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">⚙️</div>
+    التنفيذ
+  </div>
+  <div class="card">
+    <p>💧 IV.</p>
+    <p>🩸 تجهيز الدم.</p>
+    <p>💨 Oxygen.</p>
+    <p>↙ Lateral position.</p>
+    <p>❤️ Continuous monitoring.</p>
+    <p>🚑 تجهيز العملية.</p>
+    <p>🤍 دعم نفسي.</p>
+    <p style="margin-top:12px;">لاحظي أن كل التدخلات تهدف إلى:</p>
+    <p>إنقاذ الأم...</p>
+    <p>ثم إنقاذ الطفل.</p>
+  </div>
+
+  <!-- Nursing Diagnoses -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🧠</div>
+    🧠 Nursing Diagnoses
+  </div>
+  <div class="card">
+    <p>لا تحفظيها.</p>
+    <p>كلها ترجع إلى أربع مشاكل:</p>
+    <p style="margin-top:12px;">😖 Pain.</p>
+    <p>🩸 Hemorrhage.</p>
+    <p>👶 Hypoxia.</p>
+    <p>⚠ Shock.</p>
+    <p style="margin-top:12px;">إذا فهمت هذه الأربعة...</p>
+    <p>فقد حفظت التشخيصات كلها.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- مقارنة الثلاثة الكبار -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">👑</div>
+    👑 مقارنة الثلاثة الكبار
+  </div>
+  <div class="card">
+    <div class="grid-2col">
+      <div style="border:2px solid #f9a8d4; border-radius:16px; padding:14px; background:#fff5f9;">
+        <strong style="color:#db2777;">🩷 Placenta Previa</strong>
+        <p style="margin-top:6px;">المشيمة في المكان الخطأ</p>
+        <p>النزيف قبل الولادة غالبًا</p>
+        <p>😌 بدون ألم</p>
+        <p>❤️ Bright red</p>
+        <p>الرحم لين</p>
+        <p>❌ لا Vaginal exam</p>
+        <p>خطر على الأم والجنين</p>
+      </div>
+      <div style="border:2px solid #93c5fd; border-radius:16px; padding:14px; background:#f8faff;">
+        <strong style="color:#2563eb;">❤️ Placenta Accreta</strong>
+        <p style="margin-top:6px;">المشيمة ملتصقة بعمق</p>
+        <p>النزيف بعد الولادة</p>
+        <p>المشكلة ليست الألم</p>
+        <p>Massive PPH</p>
+        <p>لا توجد علامة رحمية مميزة</p>
+        <p>❌ لا تفصل المشيمة بالقوة</p>
+        <p>خطر على الأم بسبب PPH</p>
+      </div>
+    </div>
+    <div style="border:2px solid #fca5a5; border-radius:16px; padding:14px; background:#fff5f5; margin-top:14px;">
+      <strong style="color:#dc2626;">💔 Abruptio Placenta</strong>
+      <p style="margin-top:6px;">المشيمة انفصلت مبكرًا</p>
+      <p>النزيف قبل الولادة</p>
+      <p>😭 ألم شديد جدًا</p>
+      <p>قد يكون ظاهرًا أو مخفيًا</p>
+      <p>🪨 الرحم صلب ومؤلم</p>
+      <p>🚨 أنقذ الأم والجنين بسرعة</p>
+      <p>خطر شديد على الجنين بسبب نقص الأكسجين</p>
+    </div>
+  </div>
+
+  <!-- الجملة الذهبية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎯</div>
+    🎯 الجملة التي ستجعلك لا تنسينهم أبدًا
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p style="font-size:16px;">🩷 <strong>Previa:</strong> المشيمة في المكان الخطأ.</p>
+    <p style="font-size:16px;">❤️ <strong>Accreta:</strong> المشيمة متشبثة أكثر من اللازم.</p>
+    <p style="font-size:16px;">💔 <strong>Abruptio:</strong> المشيمة تركت مكانها قبل الأوان.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">😂 والله الثلاثة كأنهم شخصيات في مسلسل واحد، وكل واحدة قررت أن تخرّب الحمل بطريقة مختلفة. وعندما تربطينهم بهذه الطريقة، لن تحتاجي إلى حفظهم كأنهم ثلاث محاضرات منفصلة، بل كأنهم ثلاثة فصول من نفس القصة. 👑</p>
+
+</div>
+</body>
+</html>

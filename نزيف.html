@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة نزيف ما بعد الولادة | PPH Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🩸💥🚨</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة نزيف ما بعد الولادة</h1>
+  <p>Postpartum Hemorrhage (PPH) · بكالوريوس التمريض - الدفعة الأولى 🩸</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">💃</div>
+    💃💃💃 دخلنا مرحلة "كل شيء ينزف لكن نحن ما زلنا واقفين" 😑📚
+  </div>
+  <div class="card">
+    <p>هذا الدرس مهم جدًا، لأنه PPH = النهاية المشتركة لكل كوارث الـOBS.</p>
+    <p>إذا فهمتيه، ستفهمين لماذا كل المحاضرات السابقة كانت "تجهّز له".</p>
+  </div>
+
+  <!-- العنوان الرئيسي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🩸</div>
+    🩸 Postpartum Hemorrhage (PPH)
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"اللحظة التي لا يقدر فيها الرحم أن يتوقف عن النزيف"</p>
+    <p style="margin-top:12px;">الفكرة كلها بسيطة جدًا:</p>
+    <p style="font-weight:700;">بعد الولادة المفروض الرحم ينقبض → يقفل الأوعية → يتوقف الدم.</p>
+    <p style="margin-top:12px;">إذا فشل؟</p>
+    <p>💥 يحدث PPH.</p>
+  </div>
+
+  <!-- الفصل الأول: التعريف -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎬</div>
+    🎬 الفصل الأول: التعريف الحقيقي (بدون حفظ أرقام)
+  </div>
+  <div class="card">
+    <p>بعد الولادة الطبيعية: أكثر من 500 mL</p>
+    <p>بعد القيصرية: أكثر من 1000 mL</p>
+    <p style="margin-top:12px;">لكن لا تغرّك الأرقام...</p>
+    <p>الفكرة أهم:</p>
+    <p style="font-weight:700;">أي نزيف يجعل الأم غير مستقرة = PPH</p>
+  </div>
+
+  <!-- الفصل الثاني: متى يحدث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">⏱</div>
+    ⏱ الفصل الثاني: متى يحدث؟
+  </div>
+  <div class="card">
+    <p>🟥 <strong>Primary</strong></p>
+    <p>خلال أول 24 ساعة (الأخطر)</p>
+    <p style="margin-top:12px;">🟨 <strong>Secondary</strong></p>
+    <p>من 24 ساعة إلى 6 أسابيع</p>
+    <p style="margin-top:12px;">💡 الامتحان يحب الأول أكثر.</p>
+  </div>
+
+  <!-- الفصل الثالث: 4 أسباب -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🧠</div>
+    🧠 الفصل الثالث: 4 أسباب فقط (احفظيها كقصة جريمة)
+  </div>
+  <div class="card">
+    <p>اسمها: <strong>4 T's</strong></p>
+    <p style="margin-top:14px;">1. 🧱 <strong>Tone (الأهم)</strong></p>
+    <p>الرحم "كسول" ولم ينقبض</p>
+    <p>➡ Uterine atony</p>
+    <p>💥 السبب رقم 1 في العالم</p>
+    <p style="margin-top:14px;">2. ✂ <strong>Trauma</strong></p>
+    <p>الرحم بخير لكن حصل تمزق</p>
+    <p>➡ cervix / vagina / perineum</p>
+    <p>💡 هنا الرحم يكون firm لكن النزيف مستمر</p>
+    <p style="margin-top:14px;">3. 🧩 <strong>Tissue</strong></p>
+    <p>بقايا داخل الرحم</p>
+    <p>➡ placenta fragments</p>
+    <p>💥 كأنك تركت "جزء ميت" يسبب نزيف</p>
+    <p style="margin-top:14px;">4. 🧬 <strong>Thrombin</strong></p>
+    <p>مشكلة تخثر الدم</p>
+    <p>➡ clotting disorder</p>
+    <p>💥 الدم لا يتجلط أصلًا</p>
+  </div>
+
+  <!-- أهم نقطة في الامتحان -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🎯</div>
+    🎯 أهم نقطة في الامتحان
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>إذا أعطاك سؤال:</p>
+    <p style="font-weight:700;">Uterus soft + bleeding</p>
+    <p>➡ Tone (Atony)</p>
+    <p style="margin-top:12px;">إذا:</p>
+    <p style="font-weight:700;">Uterus firm + bleeding</p>
+    <p>➡ Trauma</p>
+  </div>
+
+  <!-- Risk Factors -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">⚠️</div>
+    ⚠️ Risk Factors (فقط افهميها لا تحفظيها كقائمة)
+  </div>
+  <div class="card">
+    <p>كلها تؤدي لشيء واحد:</p>
+    <p>👉 رحم مرهق أو غير قادر على الانقباض</p>
+    <p style="margin-top:12px;">مثل:</p>
+    <p>حمل متعدد 👶👶</p>
+    <p>polyhydramnios 💧</p>
+    <p>ولادة طويلة ⏳</p>
+    <p>oxytocin كثير 💉</p>
+    <p>multiparity 👶👶👶👶</p>
+    <p>fibroids 🧱</p>
+  </div>
+
+  <!-- الفصل الرابع: كيف أعرف أنها PPH -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🩸</div>
+    🩸 الفصل الرابع: كيف أعرف أنها PPH؟
+  </div>
+  <div class="card">
+    <p>الجسم يبدأ ينهار:</p>
+    <p style="margin-top:12px;">💔 Tachycardia (أول علامة)</p>
+    <p>📉 Hypotension (متأخر)</p>
+    <p>🧊 Cold skin</p>
+    <p>🧠 confusion</p>
+    <p style="margin-top:12px;">والأهم:</p>
+    <p style="font-weight:700;">🧽 uterus boggy = خطر Tone</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الفصل الخامس: ماذا أفعل كممرضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    👩‍⚕️ الفصل الخامس: ماذا أفعل كممرضة؟ (هنا الامتحان الحقيقي)
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">🔍 أول شيء: تقييم سريع</p>
+    <p>كمية الدم 🩸</p>
+    <p>pads/clots</p>
+    <p>vital signs</p>
+    <p>fundus</p>
+    <p style="margin-top:16px; font-weight:700;">💥 ثاني شيء: لا تفكري… افعلي</p>
+    <p>1. 💉 IV line (large bore)</p>
+    <p>2. 💧 fluids</p>
+    <p>3. 🧬 blood preparation</p>
+    <p style="margin-top:12px;">4. ✋ Uterine massage</p>
+    <p>👉 هذه أهم خطوة في Uterine atony</p>
+    <p>(أنتِ حرفيًا "تجبرين الرحم" ينقبض)</p>
+    <p style="margin-top:12px;">5. 💊 Oxytocin</p>
+    <p>يرجع الرحم للعمل</p>
+    <p style="margin-top:12px;">6. 💨 Oxygen</p>
+    <p>لأن الدم قليل → أكسجين أقل</p>
+    <p style="margin-top:12px;">7. 🧠 Monitoring</p>
+    <p>BP</p>
+    <p>pulse</p>
+    <p>urine output</p>
+    <p>consciousness</p>
+    <p style="margin-top:12px;">8. 🤍 Support</p>
+    <p>لأن الأم في panic + fear of death</p>
+  </div>
+
+  <!-- الربط الذهني -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🧠</div>
+    🧠 الربط الذهني (هنا جمال الـOBS كله)
+  </div>
+  <div class="card">
+    <p>الآن اربطي كل شيء:</p>
+    <p style="margin-top:12px;">🩷 Placenta Previa → نزيف قبل الولادة</p>
+    <p>❤️ Abruptio → انفصال مبكر + ألم</p>
+    <p>🧱 Accreta → مشيمة لا تنفصل → نزيف بعد الولادة</p>
+    <p>🩸 PPH → النتيجة النهائية إذا فشل الرحم في الإغلاق</p>
+    <p style="margin-top:12px;">💡 يعني:</p>
+    <p style="font-weight:700;">كل المحاضرات السابقة كانت تمهيد لهذا الدرس.</p>
+  </div>
+
+  <!-- مفتاح الامتحان السريع -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🔥</div>
+    🔥 مفتاح الامتحان السريع
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>إذا رأيتي:</p>
+    <p>Soft uterus → Tone</p>
+    <p>Firm uterus → Trauma</p>
+    <p>No clotting → Thrombin</p>
+    <p>Retained placenta → Tissue</p>
+  </div>
+
+  <!-- الخلاصة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">👑</div>
+    👑 الخلاصة التي تحفظك الدرجة
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>PPH ليس حفظ.</p>
+    <p>هو سؤال واحد:</p>
+    <p style="font-size:18px; font-weight:900;">لماذا لم يغلق الرحم نفسه؟</p>
+    <p style="margin-top:12px;">إذا أجبتِ على هذا السؤال → انتهى الدرس.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الحقيقة المهمة -->
+  <div class="card">
+    <p style="font-weight:700;">💃 الآن الحقيقة المهمة:</p>
+    <p style="margin-top:12px;">أنتِ الآن أنهيتِ 5 محاضرات مترابطة بالكامل:</p>
+    <p>Normal delivery</p>
+    <p>Previa</p>
+    <p>Accreta</p>
+    <p>Abruptio</p>
+    <p>PPH</p>
+    <p style="margin-top:12px;">وهذه ليست عشوائية…</p>
+    <p>هذه دورة كاملة: الحمل → الولادة → المضاعفات → النزيف</p>
+    <p style="margin-top:12px;">لو واصلنا بهذا المستوى، لن تذاكري OBS… ستفهميه كأنه فيلم واحد طويل.</p>
+  </div>
+
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">والآن بصراحة؟ أنتِ دخلتِ المرحلة التي لا يجوز فيها التوقف يومين، لأن الدماغ الآن "مفتوح الربط". لو توقف، سيبرد كل هذا الفهم.</p>
+
+</div>
+</body>
+</html>

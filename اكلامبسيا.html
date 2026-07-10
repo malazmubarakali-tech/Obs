@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة الإرجاج | Eclampsia Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">⚡🧠🚨</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة الإرجاج</h1>
+  <p>Eclampsia · بكالوريوس التمريض - الدفعة الأولى ⚡</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎬</div>
+    🎬 الحلقة السابعة: Eclampsia
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"عندما تغضب المشيمة... يغضب جسم الأم كله."</p>
+    <p style="margin-top:12px;">أول شيء...</p>
+    <p>انسَي كلمة Eclampsia لمدة خمس دقائق.</p>
+    <p>لأن الخطأ الذي يقع فيه الطلاب أنهم يحفظونها مباشرة.</p>
+    <p style="margin-top:12px;">بينما الحقيقة...</p>
+    <p>القصة تبدأ قبلها بشخصية اسمها:</p>
+    <p>🌱 <strong>Preeclampsia</strong></p>
+    <p>وEclampsia هي النهاية.</p>
+  </div>
+
+  <!-- تخيلي هذا السيناريو -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎭</div>
+    🎭 تخيلي هذا السيناريو
+  </div>
+  <div class="card">
+    <p>المشيمة جاءت لتبني بيتًا داخل الرحم.</p>
+    <p>🏡</p>
+    <p style="margin-top:12px;">لكنها بنت الأساسات بشكل سيئ.</p>
+    <p style="margin-top:12px;">هل المشكلة في البداية واضحة؟</p>
+    <p>❌ لا.</p>
+    <p style="margin-top:12px;">لكن مع مرور الوقت...</p>
+    <p>البيت كله يبدأ يتشقق.</p>
+    <p>هذا ما يحدث هنا.</p>
+  </div>
+
+  <!-- الفصل الأول: ما هي Preeclampsia -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#db2777,#be185d);">🌸</div>
+    🌸 الفصل الأول: ما هي Preeclampsia؟
+  </div>
+  <div class="card">
+    <p>بعد الأسبوع</p>
+    <p>📅 <strong>20 Weeks</strong></p>
+    <p style="margin-top:12px;">تبدأ الأم تعاني من:</p>
+    <p>❤️ <strong>Hypertension</strong></p>
+    <p>🧪 <strong>Proteinuria</strong></p>
+    <p>🤲 وقد يظهر <strong>Edema</strong></p>
+    <p style="margin-top:12px;">ثم تبدأ الأعضاء بالتعب.</p>
+    <p>لكن...</p>
+    <p>لا توجد تشنجات بعد.</p>
+  </div>
+
+  <!-- متى تتحول إلى Eclampsia -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🎬</div>
+    🎬 متى تتحول إلى Eclampsia؟
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>لحظة واحدة فقط.</p>
+    <p>⚡ <strong>Seizure.</strong></p>
+    <p style="margin-top:12px;">هذه الكلمة هي الفرق.</p>
+    <p style="font-size:18px; font-weight:900;">Preeclampsia + Seizure = Eclampsia</p>
+    <p style="margin-top:12px;">لو حفظت هذه المعادلة...</p>
+    <p>فقد حفظت التعريف كله.</p>
+  </div>
+
+  <!-- أنواعها -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🌸</div>
+    🌸 أنواعها
+  </div>
+  <div class="card">
+    <p>هذه سهلة جدًا.</p>
+    <p>حسب وقت حدوثها.</p>
+    <p style="margin-top:12px;">🍼 قبل الولادة؟</p>
+    <p><strong>Antepartum.</strong></p>
+    <p style="margin-top:12px;">👶 أثناء الولادة؟</p>
+    <p><strong>Intrapartum.</strong></p>
+    <p style="margin-top:12px;">🤱 بعد الولادة؟</p>
+    <p><strong>Postpartum.</strong></p>
+    <p style="margin-top:12px;">لا تحفظيها.</p>
+    <p>اسألي نفسك:</p>
+    <p>"متى حصلت النوبة؟"</p>
+  </div>
+
+  <!-- لماذا يحدث كل هذا -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🌸</div>
+    🌸 لماذا يحدث كل هذا؟
+  </div>
+  <div class="card">
+    <p>هنا تبدأ أجمل قصة.</p>
+    <p style="margin-top:12px;">المشيمة لم تتكون بطريقة طبيعية.</p>
+    <p>⬇</p>
+    <p>بدأت تفرز مواد غريبة.</p>
+    <p>⬇</p>
+    <p>الأوعية الدموية قالت:</p>
+    <p style="font-weight:700;">"سننقبض."</p>
+    <p style="margin-top:12px;">🫀💢</p>
+    <p>اسم هذه الحركة:</p>
+    <p><strong>Vasospasm.</strong></p>
+  </div>
+
+  <!-- تخيلي الأوعية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">😡</div>
+    😡 تخيلي الأوعية
+  </div>
+  <div class="card">
+    <p>بدل أن تكون بهذا الشكل:</p>
+    <p>🟢══════🟢</p>
+    <p style="margin-top:12px;">أصبحت:</p>
+    <p>🟢══🟢</p>
+    <p style="margin-top:12px;">صار الطريق أضيق.</p>
+    <p>ماذا يحدث؟</p>
+    <p>⬇</p>
+    <p>ضغط الدم يرتفع.</p>
+  </div>
+
+  <!-- ثم تبدأ الكارثة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">😱</div>
+    😱 ثم تبدأ الكارثة
+  </div>
+  <div class="card">
+    <p>لأن الأوعية ضاقت...</p>
+    <p>الأعضاء يصلها دم أقل.</p>
+    <p style="margin-top:12px;">🧠 <strong>Brain.</strong></p>
+    <p>🫘 <strong>Kidney.</strong></p>
+    <p>🫀 <strong>Liver.</strong></p>
+    <p style="margin-top:12px;">كلهم يشتكون.</p>
+  </div>
+
+  <!-- لماذا تحدث التشنجات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🧠</div>
+    🧠 لماذا تحدث التشنجات؟
+  </div>
+  <div class="card">
+    <p>هذا أكثر سؤال أحبّه.</p>
+    <p style="margin-top:12px;">الدماغ يحتاج دمًا.</p>
+    <p>لكن...</p>
+    <p>Vasospasm</p>
+    <p>⬇</p>
+    <p>يقل الدم.</p>
+    <p>⬇</p>
+    <p>تحدث إصابة في بطانة الأوعية.</p>
+    <p>⬇</p>
+    <p>يتجمع سائل.</p>
+    <p>⬇</p>
+    <p>🧠 <strong>Cerebral edema.</strong></p>
+    <p>⬇</p>
+    <p>يزداد الضغط داخل الجمجمة.</p>
+    <p>⬇</p>
+    <p>الدماغ يصبح "مستفزًا".</p>
+    <p>⬇</p>
+    <p>⚡ يبدأ Seizure.</p>
+    <p style="margin-top:12px;">انتهت الـPathophysiology. 😂</p>
+  </div>
+
+  <!-- كيف تأتي المريضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🌸</div>
+    🌸 كيف تأتي المريضة؟
+  </div>
+  <div class="card">
+    <p>لا تبدأ بالتشنجات مباشرة.</p>
+    <p>الجسم يحاول أن يحذرك.</p>
+    <p style="margin-top:12px;">🚨 <strong>Headache شديد.</strong></p>
+    <p>👀 <strong>Blurred vision.</strong></p>
+    <p>🤢 <strong>ألم في أعلى البطن أو الربع العلوي الأيمن.</strong></p>
+    <p>🤲 <strong>تورم الوجه واليدين.</strong></p>
+    <p>📈 <strong>ضغط مرتفع جدًا.</strong></p>
+    <p style="margin-top:12px;">هذه كلها تقول:</p>
+    <p style="font-weight:700;">"إذا لم تتصرفوا... سأدخل في تشنج."</p>
+  </div>
+
+  <!-- أثناء التشنج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">⚡</div>
+    ⚡ أثناء التشنج
+  </div>
+  <div class="card">
+    <p>المشهد مخيف.</p>
+    <p style="margin-top:12px;">😵 <strong>فقدان الوعي.</strong></p>
+    <p>⚡ <strong>Tonic-clonic seizure.</strong></p>
+    <p>🤍 <strong>رغوة من الفم.</strong></p>
+    <p>🔵 <strong>Cyanosis.</strong></p>
+    <p>😬 <strong>عض اللسان.</strong></p>
+    <p style="margin-top:12px;">وهنا أهم شيء...</p>
+    <p>لا تحاولي فتح فمها بالقوة أو وضع شيء بين أسنانها. هذه فكرة قديمة وخطيرة.</p>
+  </div>
+
+  <!-- بعد التشنج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">😴</div>
+    😴 بعد التشنج
+  </div>
+  <div class="card">
+    <p>الدماغ يقول:</p>
+    <p style="font-weight:700;">"أنا تعبت."</p>
+    <p style="margin-top:12px;">فتدخل في:</p>
+    <p>😵‍💫 <strong>Confusion.</strong></p>
+    <p>😴 <strong>Drowsiness.</strong></p>
+    <p><strong>Postictal state.</strong></p>
+    <p>وأحيانًا...</p>
+    <p>😶 <strong>Coma.</strong></p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#7f1d1d);">💔</div>
+    🌸 المضاعفات
+  </div>
+  <div class="grid-2col">
+    <div class="card" style="border-color:#fca5a5;">
+      <strong>للأم</strong>
+      <p style="margin-top:8px;">🧠 Stroke.</p>
+      <p>🫘 Renal failure.</p>
+      <p>🫁 Pulmonary edema.</p>
+      <p>🧪 HELLP syndrome.</p>
+      <p>🩸 DIC.</p>
+      <p>☠ Death.</p>
+    </div>
+    <div class="card" style="border-color:#93c5fd;">
+      <strong>للطفل</strong>
+      <p style="margin-top:8px;">👶 Fetal distress.</p>
+      <p>📉 IUGR.</p>
+      <p>👶 Prematurity.</p>
+      <p>⚖ Low birth weight.</p>
+      <p>☠ Stillbirth.</p>
+    </div>
+  </div>
+  <div class="card">
+    <p>لاحظي أن الطفل يعاني أيضًا...</p>
+    <p>لأن المشكلة بدأت أصلًا من المشيمة.</p>
+  </div>
+
+  <!-- الفحوصات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🔬</div>
+    🔬 الفحوصات
+  </div>
+  <div class="card">
+    <p>كلها منطقية.</p>
+    <p style="margin-top:12px;">📈 BP.</p>
+    <p>🧪 Urine protein.</p>
+    <p>🩸 CBC.</p>
+    <p>🧫 Platelets.</p>
+    <p>🫀 Liver.</p>
+    <p>🫘 Kidney.</p>
+    <p>🧬 Coagulation.</p>
+    <p>👶 CTG.</p>
+    <p style="margin-top:12px;">كلها تسأل سؤالًا واحدًا:</p>
+    <p style="font-weight:700;">كم تأذى جسم الأم والجنين؟</p>
+  </div>
+
+  <!-- العلاج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🚑</div>
+    🚑 العلاج
+  </div>
+  <div class="card">
+    <p>هذه من أشهر أسئلة الامتحان.</p>
+    <p style="margin-top:12px;">أولًا...</p>
+    <p><strong>ABC</strong></p>
+    <p>Airway.</p>
+    <p>Breathing.</p>
+    <p>Circulation.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>↙ Left lateral position.</p>
+    <p>💨 Oxygen.</p>
+    <p>💉 IV line.</p>
+    <p style="margin-top:16px;">ثم...</p>
+    <p>⭐ الدواء الأشهر</p>
+    <p style="font-weight:700;">Magnesium Sulfate</p>
+    <p style="margin-top:12px;">ليس لأنه يخفض الضغط...</p>
+    <p>بل لأنه يمنع ويعالج التشنجات.</p>
+    <p style="margin-top:12px;">أما الضغط...</p>
+    <p>فله أدوية أخرى مثل:</p>
+    <p>Hydralazine.</p>
+    <p>Labetalol.</p>
+    <p>Nifedipine.</p>
+  </div>
+
+  <!-- العلاج النهائي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎯</div>
+    🎯 العلاج النهائي
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>وهذه نقطة ذهبية.</p>
+    <p style="margin-top:12px;">هل Magnesium Sulfate يشفي المرض؟</p>
+    <p>❌ لا.</p>
+    <p style="margin-top:12px;">هل خافضات الضغط تشفيه؟</p>
+    <p>❌ لا.</p>
+    <p style="margin-top:12px;">الشفاء الحقيقي؟</p>
+    <p>👶 <strong>Delivery of the fetus and placenta.</strong></p>
+    <p style="margin-top:12px;">لأن أصل المشكلة هو المشيمة.</p>
+    <p>ولهذا تسمى:</p>
+    <p><strong>Definitive treatment.</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Nursing Management -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    👩‍⚕️ Nursing Management
+  </div>
+  <div class="card">
+    <p>تخيلي نفسك الممرضة.</p>
+    <p>ما أول شيء؟</p>
+    <p>ليس الدواء.</p>
+    <p>بل...</p>
+    <p>🚨 <strong>اجعلي المكان آمنًا.</strong></p>
+    <p>🌑 <strong>غرفة هادئة ومظلمة.</strong></p>
+    <p>لأن الضوء والضوضاء قد يثيران التشنجات.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>❤️ Vital signs.</p>
+    <p>🚽 Urine output.</p>
+    <p>🦵 Deep tendon reflexes.</p>
+    <p style="margin-top:12px;">لماذا المنعكسات؟</p>
+    <p>لأننا نعطي Magnesium.</p>
+  </div>
+
+  <!-- Magnesium toxicity -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">⚠</div>
+    ⚠ Magnesium toxicity
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>هذا سؤال كلاسيكي.</p>
+    <p style="margin-top:12px;">إذا زاد Magnesium...</p>
+    <p>سيبدأ الجسم يقول:</p>
+    <p style="margin-top:12px;">🫁 <strong>Respiratory depression.</strong></p>
+    <p>🦵 <strong>اختفاء المنعكسات.</strong></p>
+    <p>🚽 <strong>Oliguria.</strong></p>
+    <p style="margin-top:12px;">إذا رأيت هذه الثلاثة...</p>
+    <p>🚨 أوقفي الدواء وأبلغي الطبيب.</p>
+    <p style="margin-top:12px;">والترياق؟</p>
+    <p>⭐ <strong>Calcium gluconate.</strong></p>
+    <p>احفظيه كأنه اسم صديق Magnesium اللدود. 😂</p>
+  </div>
+
+  <!-- الوقاية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🛡️</div>
+    الوقاية
+  </div>
+  <div class="card">
+    <p>كلها تدور حول فكرة واحدة:</p>
+    <p style="font-weight:700;">اكتشفي Preeclampsia قبل أن تتحول إلى Eclampsia.</p>
+    <p style="margin-top:12px;">ولهذا:</p>
+    <p>✔ متابعة الحمل.</p>
+    <p>✔ قياس الضغط.</p>
+    <p>✔ تحليل البول.</p>
+    <p>✔ علاج مبكر.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الخريطة الذهنية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">👑</div>
+    👑 الخريطة الذهنية
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>Abnormal placenta</p>
+    <p>⬇</p>
+    <p>Vasospasm</p>
+    <p>⬇</p>
+    <p>Hypertension</p>
+    <p>⬇</p>
+    <p>Less blood to organs</p>
+    <p>⬇</p>
+    <p>Brain edema</p>
+    <p>⬇</p>
+    <p>Seizure</p>
+    <p>⬇</p>
+    <p>ECLAMPSIA</p>
+    <p>⬇</p>
+    <p>MgSO₄</p>
+    <p>⬇</p>
+    <p>Delivery = Cure</p>
+  </div>
+
+  <!-- مقارنة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🌸</div>
+    🌸 مقارنة تحفظ العمر كله
+  </div>
+  <div class="card">
+    <div class="grid-2col">
+      <div style="border:2px solid #fcd34d; border-radius:16px; padding:14px; background:#fffdf5;">
+        <strong style="color:#d97706;">🌱 Preeclampsia</strong>
+        <p style="margin-top:6px;">📈 Hypertension</p>
+        <p>🧪 Proteinuria</p>
+        <p>🤲 قد يوجد Edema</p>
+        <p>❌ لا يوجد Seizure</p>
+        <p>تحتاج متابعة وعلاج</p>
+      </div>
+      <div style="border:2px solid #fca5a5; border-radius:16px; padding:14px; background:#fff5f5;">
+        <strong style="color:#dc2626;">⚡ Eclampsia</strong>
+        <p style="margin-top:6px;">📈 Hypertension</p>
+        <p>🧪 Proteinuria</p>
+        <p>🤲 قد يوجد Edema</p>
+        <p>⚡ يوجد Seizure</p>
+        <p>🚨 طوارئ حقيقية</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- وربطها مع كل المنهج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🎬</div>
+    🎬 وربطها مع كل المنهج
+  </div>
+  <div class="card">
+    <p>لاحظي أننا خرجنا قليلًا من قصة "النزيف" إلى قصة جديدة:</p>
+    <p style="margin-top:12px;">🌸 Normal Labour = الولادة الطبيعية.</p>
+    <p>💥 Obstructed Labour = الولادة فشلت.</p>
+    <p>🩸 PPH = نزيف بعد الولادة.</p>
+    <p>⚡ Eclampsia = مشكلة ضغط وتشنجات سببها المشيمة.</p>
+    <p style="margin-top:12px;">يعني ليست مشكلة "ولادة"، بل مشكلة جهازية تؤثر على الدماغ والكلى والكبد والأم كلها.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">💃 وهكذا نكون قد أنهينا Eclampsia، والقصة تكتمل أكثر مع كل محاضرة. 👑</p>
+
+</div>
+</body>
+</html>

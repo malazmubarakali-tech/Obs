@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة عدوى ما بعد الولادة | Postpartum Infection Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🦠🤒🚨</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة عدوى ما بعد الولادة</h1>
+  <p>Postpartum Infection · بكالوريوس التمريض - الدفعة الأولى 🦠</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎬</div>
+    🎬 Postpartum Infection
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"العدوى بعد الولادة: لما الجسم يكون لسه مفتوح على العالم"</p>
+    <p style="margin-top:12px;">بعد الولادة… الرحم مو "غرفة مغلقة"</p>
+    <p>هو أشبه بـ:</p>
+    <p>🚪 بيت مفتوح + جروح + تعب + دم + قابلية عالية للعدوى</p>
+    <p style="margin-top:12px;">أي ميكروب يقول: "فرصة ذهبية"</p>
+  </div>
+
+  <!-- Puerperal Sepsis -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🧨</div>
+    🧨 أولاً: Puerperal Sepsis (العدوى العامة)
+  </div>
+  <div class="card">
+    <p>الفكرة:</p>
+    <p>عدوى تصيب الجهاز التناسلي خلال 28 يوم بعد الولادة/الإجهاض.</p>
+    <p style="margin-top:12px;">💀 يعني الجسم في مرحلة:</p>
+    <p>"تعافٍ… لكن قابل للانهيار بسرعة"</p>
+    <p style="margin-top:12px;">🧠 لماذا تصير؟</p>
+    <p>لأن كل شيء بعد الولادة حساس:</p>
+    <p>عنق الرحم مفتوح جزئياً</p>
+    <p>دم + أنسجة = بيئة مثالية للبكتيريا</p>
+    <p>مناعة الأم منخفضة</p>
+  </div>
+
+  <!-- 1. Wound Infection -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🩸</div>
+    🩸 1. Wound Infection
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"جرح الولادة اللي ما التئم بسلام"</p>
+    <p style="margin-top:12px;">سواء:</p>
+    <p>قيصرية</p>
+    <p>خياطة</p>
+    <p>تمزق</p>
+    <p style="margin-top:12px;">🧪 العلامات:</p>
+    <p>احمرار 🔴</p>
+    <p>حرارة 🔥</p>
+    <p>ألم 😣</p>
+    <p>إفرازات صديدية</p>
+    <p>رائحة</p>
+    <p>حرارة جسم</p>
+    <p style="margin-top:12px;">🧠 المعنى الحقيقي:</p>
+    <p>الجرح بدل ما يقفل… فتح باب للبكتيريا</p>
+    <p style="margin-top:12px;">🛠 العلاج:</p>
+    <p>Antibiotics</p>
+    <p>تنظيف + Sitz bath</p>
+    <p>أحياناً فتح وتصريف الصديد</p>
+  </div>
+
+  <!-- 2. Endometritis -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🧠</div>
+    🧠 2. Endometritis
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"العدوى داخل الرحم"</p>
+    <p style="margin-top:12px;">هذا أخطر وأشهر جزء.</p>
+    <p style="margin-top:12px;">💥 ماذا يحدث؟</p>
+    <p>البكتيريا تصعد من المهبل إلى الرحم</p>
+    <p style="margin-top:12px;">⚠️ عوامل الخطر (احفظي الفكرة لا الكلمات):</p>
+    <p>أي شيء = "تدخلات كثيرة + ولادة صعبة"</p>
+    <p>ولادة طويلة</p>
+    <p>قيصرية</p>
+    <p>فحوصات متكررة</p>
+    <p>بقايا مشيمة</p>
+    <p>سوء تعقيم</p>
+    <p style="margin-top:12px;">💔 الأعراض:</p>
+    <p>حرارة 🤒</p>
+    <p>ألم أسفل البطن</p>
+    <p>رحم مؤلم وكبير</p>
+    <p>إفرازات كريهة</p>
+    <p>تعب عام</p>
+    <p style="margin-top:12px;">🧠 تخيليها كذا:</p>
+    <p>الرحم بدل ما ينكمش… ينتفخ ويغضب لأنه ملتهب</p>
+    <p style="margin-top:12px;">🛠 العلاج:</p>
+    <p>مضادات واسعة</p>
+    <p>سوائل</p>
+    <p>راحة</p>
+    <p>أحياناً تنظيف إذا فيه بقايا</p>
+  </div>
+
+  <!-- 3. Mastitis -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🍼</div>
+    🍼 3. Mastitis
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"عدوى الحليب"</p>
+    <p style="margin-top:12px;">هنا المشكلة ليست في الرحم…</p>
+    <p>بل في الثدي.</p>
+    <p style="margin-top:12px;">💥 ماذا يحدث؟</p>
+    <p>انسداد الحليب</p>
+    <p>دخول بكتيريا (Staph)</p>
+    <p style="margin-top:12px;">⚠️ الأعراض:</p>
+    <p>ألم شديد في ثدي واحد</p>
+    <p>احمرار + حرارة</p>
+    <p>كتلة صلبة</p>
+    <p>حرارة عامة (flu-like)</p>
+    <p style="margin-top:12px;">🧠 الفكرة المهمة:</p>
+    <p>الحليب إذا ما تحرك = يتحول لمشكلة</p>
+    <p style="margin-top:12px;">🛠 العلاج:</p>
+    <p>مضاد حيوي</p>
+    <p>تفريغ الحليب (مهم جداً)</p>
+    <p>استمرار الرضاعة</p>
+    <p>كمادات</p>
+  </div>
+
+  <!-- 4. Thrombosis -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🧬</div>
+    🧬 4. Thrombosis (الخطر الصامت)
+  </div>
+  <div class="card">
+    <p>هنا ندخل مرحلة أخطر شوي.</p>
+    <p style="margin-top:12px;">الفكرة:</p>
+    <p>الدم بعد الولادة يصبح:</p>
+    <p>"أكثر قابلية للتجلط"</p>
+    <p style="margin-top:12px;">ليش؟ لأن الجسم يحاول يمنع النزيف</p>
+    <p>لكن…</p>
+    <p>أحياناً يبالغ 💀</p>
+    <p style="margin-top:12px;">🩸 أنواعها:</p>
+    <p>1. <strong>Thrombophlebitis</strong> - التهاب الوريد + ألم + حرارة</p>
+    <p>2. <strong>DVT</strong> - جلطة في الساق</p>
+    <p>3. <strong>Pulmonary Embolism</strong> - الجلطة وصلت للرئة 😨</p>
+    <p style="margin-top:12px;">🧠 تسلسل الكارثة:</p>
+    <p>DVT → تسير بالرئة → PE → اختناق</p>
+    <p style="margin-top:12px;">⚠️ علامات DVT:</p>
+    <p>ألم بالساق</p>
+    <p>تورم</p>
+    <p>حرارة</p>
+    <p>احمرار</p>
+    <p style="margin-top:12px;">💀 PE (الأخطر):</p>
+    <p>ضيق نفس</p>
+    <p>ألم صدر</p>
+    <p>تسارع قلب</p>
+    <p>انهيار مفاجئ</p>
+    <p style="margin-top:12px;">🛠 العلاج:</p>
+    <p>Heparin</p>
+    <p>Oxygen</p>
+    <p>راحة</p>
+    <p>مراقبة دقيقة</p>
+  </div>
+
+  <!-- 5. UTI -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🚽</div>
+    🚽 5. UTI
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">"العدوى البسيطة اللي الناس تستهين فيها"</p>
+    <p style="margin-top:12px;">لكن بعد الولادة تصبح مهمة.</p>
+    <p style="margin-top:12px;">💥 الأعراض:</p>
+    <p>حرقان</p>
+    <p>كثرة تبول</p>
+    <p>ألم أسفل البطن</p>
+    <p>حرارة خفيفة</p>
+    <p style="margin-top:12px;">🧠 السبب:</p>
+    <p>قسطرة</p>
+    <p>قلة شرب</p>
+    <p>احتباس بول</p>
+    <p style="margin-top:12px;">🛠 العلاج:</p>
+    <p>مضاد حيوي</p>
+    <p>سوائل</p>
+    <p>نظافة</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الربط الذهني -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🧠</div>
+    🧠 الربط الذهني الذكي (بدون حفظ)
+  </div>
+  <div class="card">
+    <p>بعد الولادة الجسم ممكن يدخل 5 اتجاهات مشاكل:</p>
+    <p style="margin-top:12px;">🏠 <strong>مكان الجرح:</strong> Wound infection</p>
+    <p>🏠 <strong>داخل الرحم:</strong> Endometritis</p>
+    <p>🍼 <strong>الثدي:</strong> Mastitis</p>
+    <p>🩸 <strong>الدم:</strong> Thrombosis / PE</p>
+    <p>🚽 <strong>البول:</strong> UTI</p>
+  </div>
+
+  <!-- الخلاصة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🎯</div>
+    🎯 الخلاصة القاسية (لكن مهمة)
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>لو تختصريها حفظ: ❌ ستنسينها بعد يومين</p>
+    <p>لو فهمتيها: ✔ هي فقط "5 أماكن ممكن يصير فيها خلل بعد الولادة"</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">💃 وهكذا نكون قد أنهينا Postpartum Infection، والقصة تكتمل أكثر مع كل محاضرة. 👑</p>
+
+</div>
+</body>
+</html>

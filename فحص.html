@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة الفحص المهبلي | Vaginal Examination Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🤰🕵️‍♀️📝</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة الفحص المهبلي</h1>
+  <p>Vaginal Examination · بكالوريوس التمريض - الدفعة الأولى 🤰</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">😂❤️</div>
+    😂❤️ هذه المحاضرة من النوع الذي يكتب فيه الدكتور عشرين سطرًا ليشرح شيئًا يمكن فهمه في خمس دقائق.
+  </div>
+  <div class="card">
+    <p>لكن الامتحان يحبها لأنها مليئة بالخطوات. لذلك سنحولها إلى موقف حقيقي في غرفة الولادة.</p>
+  </div>
+
+  <!-- الفصل الأول: الممرضة المحققة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🤰</div>
+    🤰 الفصل الأول: "الممرضة المحققة"
+  </div>
+  <div class="card">
+    <p>تخيلي أن امرأة حامل دخلت غرفة الولادة وهي تقول:</p>
+    <p style="font-weight:700;">"أشعر أن الولادة اقتربت."</p>
+    <p style="margin-top:12px;">هل نقول: "مبروك... ادخلي غرفة الولادة."؟</p>
+    <p>❌ لا.</p>
+    <p style="margin-top:12px;">أولًا يجب أن نعرف:</p>
+    <p>هل الولادة تقدمت فعلًا؟</p>
+    <p>كم توسع عنق الرحم؟</p>
+    <p>هل رأس الجنين نزل؟</p>
+    <p>هل ماء الجنين نزل؟</p>
+    <p>هل يوجد خطر؟</p>
+    <p style="margin-top:12px;">وهنا يأتي دور...</p>
+    <p><strong>Vaginal Examination (VE)</strong></p>
+    <p>الفحص المهبلي.</p>
+    <p>هو ليس مجرد "إدخال إصبعين".</p>
+    <p>بل تحقيق كامل لمعرفة ما يحدث داخل قناة الولادة. 🕵️‍♀️</p>
+  </div>
+
+  <!-- قبل أن أبدأ الفحص -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">⚠️</div>
+    قبل أن أبدأ الفحص... هناك ثلاث قواعد ذهبية.
+  </div>
+  <div class="card">
+    <p><strong>أولًا: 🤰 افحصي البطن أولًا.</strong></p>
+    <p>لماذا؟ لأن كثيرًا من المعلومات يمكن معرفتها من الخارج. مكان الجنين. وضعية الجنين. نبض الجنين. لا داعي لأن يتحول الفحص المهبلي إلى هواية. كل فحص يزيد احتمال إدخال بكتيريا.</p>
+    <p style="margin-top:16px;"><strong>ثانيًا: 🗣️ اشرحي للمريضة.</strong></p>
+    <p>قولي لها ماذا ستفعلين. وخذي موافقتها. ليس لأن هذا "أدب" فقط... بل لأنه حقها.</p>
+    <p style="margin-top:16px;"><strong>ثالثًا: 🚽 يجب أن تكون المثانة فارغة.</strong></p>
+    <p>لماذا؟ تخيلي مثانة مليئة بالماء أمام رأس الجنين. ستدفع الرأس للأعلى. فتعطينا نتيجة خاطئة.</p>
+  </div>
+
+  <!-- لماذا أصلًا نجري VE -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🔍</div>
+    لماذا أصلًا نجري VE؟
+  </div>
+  <div class="card">
+    <p>كل سؤال هنا يبدأ بـ: "أريد أن أعرف..."</p>
+    <p style="margin-top:12px;"><strong>1️⃣ Presentation:</strong> من الذي ينزل أولًا؟ 👶 الرأس؟ أم المقعدة؟ أم الكتف؟</p>
+    <p><strong>2️⃣ Engagement:</strong> هل دخل رأس الجنين الحوض؟ أم لا يزال مرتفعًا؟</p>
+    <p><strong>3️⃣ Membranes:</strong> هل الأغشية سليمة؟ أم تمزقت؟</p>
+    <p><strong>4️⃣ Cord prolapse:</strong> إذا نزل الماء... هل نزل الحبل السري معه؟ لأن هذه حالة طارئة جدًا. الحبل السري مثل خرطوم الأكسجين للجنين. إذا انضغط... يختنق الجنين.</p>
+    <p><strong>5️⃣ Progress of labour:</strong> هل الولادة تتقدم؟ أم توقفت؟</p>
+    <p><strong>6️⃣ Cervical dilatation:</strong> كم وصل اتساع عنق الرحم؟ ٢ سم؟ ٥ سم؟ ١٠ سم؟ إذا وصل 10 سم... 🎉 عنق الرحم اختفى تقريبًا. وأصبحت الأم جاهزة للدفع.</p>
+    <p><strong>7️⃣ في الحمل التوأمي:</strong> بعد ولادة الطفل الأول... نتأكد من وضعية الطفل الثاني. لأنه أحيانًا يقرر تغيير مكانه في آخر لحظة. الأطفال لديهم توقيت غريب للفوضى. 😂</p>
+  </div>
+
+  <!-- لا تجرِ فحصًا مهبليًا بلا داعٍ -->
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>لكن... المحاضرة كتبت جملة مهمة جدًا.</p>
+    <p style="font-weight:700;">لا تجرِ فحصًا مهبليًا بلا داعٍ.</p>
+    <p>لماذا؟ لأن كل مرة تدخلين فيها إلى المهبل... يزداد احتمال العدوى. خصوصًا إذا كانت الأغشية ممزقة.</p>
+  </div>
+
+  <!-- كيف يتم الفحص -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">✌️</div>
+    كيف يتم الفحص؟
+  </div>
+  <div class="card">
+    <p>أول كلمة: <strong>Aseptic Technique</strong> - يعني... 🚫 ممنوع التلوث.</p>
+    <p style="margin-top:12px;">أولًا: 🧼 غسل اليدين.</p>
+    <p>ثم: 🧤 Sterile gloves.</p>
+    <p>ثم: اشرحي للمريضة.</p>
+    <p>ثم: تستلقي على ظهرها. أو أي وضعية مناسبة.</p>
+    <p style="margin-top:12px;">بعدها... تدخلين إصبعين فقط. ✌️ وليس اليد كلها كما يتخيل بعض الطلاب أول مرة يسمعون بالفحص. 😭😂</p>
+    <p>واليد الأخرى تدعم الرحم من الخارج.</p>
+  </div>
+
+  <!-- أثناء الفحص -->
+  <div class="card">
+    <strong>🔍 أثناء الفحص... لا تنظري فقط إلى الداخل. بل راقبي الخارج أيضًا.</strong>
+    <p>هل يوجد: 🟣 Varicosities (دوالي)؟ | 💧 Edema (تورم)؟ | 🌿 Warts (ثآليل)؟ | 🩹 Scar (ندبة من ولادة سابقة)؟ | ✂️ Female genital mutilation (ختان)؟ | 🩸 هل يوجد نزيف؟ | 💦 هل يوجد إفرازات؟</p>
+    <p style="margin-top:12px;">وإذا كانت الأغشية انفجرت؟ راقبي السائل الأمنيوسي.</p>
+    <p>👃 هل رائحته كريهة؟ إذا نعم... فكري في Infection.</p>
+    <p>🟢 هل لونه أخضر؟ هذا يعني وجود: <strong>Meconium.</strong> أي أن الجنين أخرج برازه داخل الرحم. وهذا إنذار يحتاج متابعة.</p>
+  </div>
+
+  <!-- أهم جزء في الفحص -->
+  <div class="card">
+    <strong>📍 أهم جزء في الفحص: الآن أصبح إصبعاك عند عنق الرحم. ماذا تفحصين؟</strong>
+    <p style="margin-top:12px;"><strong>أولًا: Cervical Dilatation</strong> - كم سنتيمتر؟ من 0 إلى 10.</p>
+    <p><strong>ثانيًا: Effacement</strong> - هل عنق الرحم أصبح رقيقًا؟ تخيلي عنق الرحم مثل ياقة سميكة. قبل الولادة تكون طويلة. ومع الولادة... تبدأ تختفي تدريجيًا. هذا هو Effacement.</p>
+    <p><strong>ثالثًا: Station</strong> - كم نزل رأس الجنين داخل الحوض؟ المرجع هنا هو: 📍 Ischial spine. إذا كان الرأس فوقها... Station سالب. إذا عندها... 0 Station. إذا نزل أسفلها... Station موجب. هذه من النقاط التي يحبها دكتور النساء جدًا.</p>
+    <p style="margin-top:12px;">وفي النهاية... 📝 <strong>Documentation.</strong> لا تكتبي: "كل شيء طبيعي." هذا ليس تقريرًا. اكتبي: 📅 التاريخ | 🕐 الوقت | 📝 النتائج بالتفصيل.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- تجهيز غرفة الولادة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🛏️</div>
+    الآن تجهيز غرفة الولادة
+  </div>
+  <div class="card">
+    <p>قبل الولادة... جهزي: 🛏️ <strong>Labor Tray.</strong> ليس وقت خروج الرأس أن تبدأي تبحثين عن المقص. البشر يفعلون هذا في المسلسلات فقط. 😂</p>
+    <p style="margin-top:12px;">أهم قاعدة: 🦠 <strong>Infection Control.</strong> احفظيها: 🧼 Hand washing | 🧤 Gloves | 🥼 Sterile gown | 🦠 منع انتقال العدوى.</p>
+  </div>
+
+  <!-- الأدوات المعقمة -->
+  <div class="card">
+    <strong>🧼 الأدوات المعقمة:</strong>
+    <p>المحاضرة حفظتها كقائمة... لكن افهميها حسب وظيفتها.</p>
+    <p>🧽 <strong>أدوات تنظيف:</strong> Gauze, Cotton, Warm solution.</p>
+    <p>🩺 <strong>أدوات التغطية:</strong> Sterile towels.</p>
+    <p>✂️ <strong>أدوات القطع:</strong> Cord scissors, Episiotomy scissors.</p>
+    <p>🩸 <strong>أدوات مسك الحبل السري:</strong> Artery forceps, Plastic clamp.</p>
+    <p>🪡 <strong>أدوات الخياطة:</strong> Needle holder, Needles, Suture materials.</p>
+    <p>💉 <strong>أدوات التخدير:</strong> Syringe, Local anesthesia.</p>
+    <p>🧤 <strong>Gloves</strong> طبعًا.</p>
+  </div>
+
+  <!-- الأدوات غير المعقمة -->
+  <div class="card">
+    <strong>📦 الأدوات غير المعقمة:</strong>
+    <p>مثل: Soap, Drum, Jar, Clean gloves, Antiseptic. هذه تجهيزات عامة وليست داخل الحقل المعقم.</p>
+  </div>
+
+  <!-- Perineal Care -->
+  <div class="card">
+    <strong>🧴 Perineal Care:</strong>
+    <p>بعد الولادة... لا ينتهي دورك. ابدئي بـ: 🧼 غسل اليدين | 🧤 قفازات معقمة | 🩺 حضري الأدوات | 💧 استخدمي ماء دافئ أو Normal saline.</p>
+    <p>ثم... نظفي المنطقة.</p>
+    <p style="margin-top:12px;"><strong>أهم قاعدة في التنظيف:</strong> ✨ دائمًا: من الأمام إلى الخلف. وليس العكس. لماذا؟ لأن الخلف مليء ببكتيريا الأمعاء. ولو نقلتها للأمام... قد تسبب UTI أو عدوى. يعني لا تعطي البكتيريا رحلة سياحية مجانية. 😂</p>
+    <p style="margin-top:12px;">ثم: 🩹 ضعي الـ Perineal pad. أيضًا... من الأمام إلى الخلف.</p>
+    <p>ثم: 👕 غيري الملابس والشرشف المبلل. 🛌 غطي الأم ببطانية دافئة.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- خلاصة الامتحان -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎯</div>
+    🎯 خلاصة الامتحان
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>احفظي المحاضرة كرحلة واحدة:</p>
+    <p style="margin-top:12px;">اشرحي للمريضة → فرغي المثانة → اغسلي اليدين والبسي القفازات المعقمة → افحصي (Presentation، Engagement، Membranes، Dilatation، Effacement، Station) → وثقي النتائج → جهزي أدوات الولادة → حافظي على التعقيم → نظفي العجان من الأمام إلى الخلف.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">😂 وبصراحة... نصف المحاضرة عبارة عن: "لا توسخي المكان." لكنهم احتاجوا 18 شريحة ليقولوها بطريقة أكاديمية. هذا إنجاز إداري لا يُستهان به.</p>
+
+</div>
+</body>
+</html>3

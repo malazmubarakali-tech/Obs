@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة الحمل خارج الرحم | Ectopic Pregnancy Full Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">💔🚨🍿</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة الحمل خارج الرحم</h1>
+  <p>Ectopic Pregnancy · بكالوريوس التمريض - الدفعة الأولى 💔</p>
+</div>
+
+<div class="container">
+
+  <!-- الفصل الأول: رحلة البويضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎬</div>
+    🎬 الفصل الأول: رحلة البويضة
+  </div>
+  <div class="card">
+    <p>كل شهر...</p>
+    <p>المبيض يطلق بويضة. 🥚</p>
+    <p>فتلتقطها قناة فالوب.</p>
+    <p>وفي منتصف القناة غالبًا...</p>
+    <p>يلتقي الحيوان المنوي بالبويضة.</p>
+    <p>💥 يحدث الإخصاب.</p>
+    <p>الآن أصبح عندنا جنين صغير جدًا.</p>
+    <p style="margin-top:12px;">لكن...</p>
+    <p>❗ مكانه ليس الرحم بعد.</p>
+    <p>هو الآن داخل Fallopian tube.</p>
+    <p style="margin-top:12px;">ماذا يفعل الجنين الطبيعي؟</p>
+    <p>لا يزرع نفسه مباشرة.</p>
+    <p>بل يسافر عدة أيام داخل القناة حتى يصل إلى بيته الحقيقي...</p>
+    <p>🏠 الرحم.</p>
+    <p>هناك فقط يسمح له بالانغراس.</p>
+  </div>
+
+  <!-- ماذا لو استعجل -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">😑</div>
+    ماذا لو استعجل؟ 😑
+  </div>
+  <div class="card">
+    <p>تخيلي أن شخصًا استأجر فندقًا وهو في الطريق إلى منزله...</p>
+    <p>ثم قال:</p>
+    <p>"خلاص... بسكن هنا."</p>
+    <p>مع أن الفندق ليس منزله أصلاً.</p>
+    <p style="margin-top:12px;">هذا بالضبط ما يحدث.</p>
+    <p>الجنين يغرس نفسه داخل قناة فالوب.</p>
+    <p>وهنا يبدأ الفيلم.</p>
+  </div>
+
+  <!-- Definition -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#db2777,#be185d);">📖</div>
+    Definition
+  </div>
+  <div class="card">
+    <p>الحمل خارج الرحم هو:</p>
+    <p style="font-weight:700;">انغراس البويضة المخصبة خارج تجويف الرحم.</p>
+    <p style="margin-top:12px;">وأشهر مكان؟</p>
+    <p>🥇 <strong>Fallopian Tube</strong></p>
+    <p>ويمثل حوالي 95% من الحالات.</p>
+    <p style="margin-top:12px;">لذلك عندما تسمعين Ectopic pregnancy...</p>
+    <p>غالبًا يقصدون Tubal pregnancy.</p>
+  </div>
+
+  <!-- لماذا هو خطير -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">💥</div>
+    لماذا هو خطير؟
+  </div>
+  <div class="card">
+    <p>هنا أهم سؤال.</p>
+    <p>هل قناة فالوب مصممة لتحمل جنينًا يكبر 9 أشهر؟</p>
+    <p>😂 طبعًا لا.</p>
+    <p>هي أنبوب رفيع جدًا.</p>
+    <p style="margin-top:12px;">في البداية...</p>
+    <p>الجنين صغير.</p>
+    <p>القناة تتحمل.</p>
+    <p style="margin-top:12px;">لكن...</p>
+    <p>يكبر قليلًا.</p>
+    <p>ثم أكبر.</p>
+    <p>ثم...</p>
+    <p>💥</p>
+    <p>القناة تتمزق.</p>
+    <p><strong>Rupture.</strong></p>
+    <p style="margin-top:12px;">وماذا يحدث؟</p>
+    <p>الدم لا ينزل للخارج مباشرة.</p>
+    <p>بل يملأ البطن.</p>
+    <p><strong>Internal hemorrhage.</strong></p>
+    <p style="margin-top:12px;">فتدخل المريضة في:</p>
+    <p><strong>Hypovolemic shock.</strong></p>
+    <p style="margin-top:12px;">ولهذا يعتبر:</p>
+    <p>🚨 <strong>Obstetric Emergency.</strong></p>
+  </div>
+
+  <!-- نسبة حدوثه -->
+  <div class="card">
+    <p><strong>📊 نسبة حدوثه:</strong> حوالي 1-2% من كل حالات الحمل. لكن كل طبيب نساء يخاف منه لأنه قد يقتل الأم بسرعة إذا لم يُشخص.</p>
+  </div>
+
+  <!-- أماكن الحمل خارج الرحم -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">📍</div>
+    أماكن الحمل خارج الرحم
+  </div>
+  <div class="card">
+    <p><strong>أولاً: Tubal pregnancy (الأكثر شيوعًا)</strong></p>
+    <p>🟡 <strong>Ampullary</strong> - أشهر مكان، لأن الإخصاب يحدث هنا غالبًا.</p>
+    <p>🟠 <strong>Isthmic</strong> - جزء أضيق، لذلك يتمزق أسرع.</p>
+    <p>🟢 <strong>Fimbrial</strong> - عند نهاية الأنبوب.</p>
+    <p>🔴 <strong>Interstitial</strong> - داخل الجزء الذي يمر خلال الرحم. هذا أخطر لأنه يتمزق متأخرًا لكن النزيف يكون كارثيًا.</p>
+    <p style="margin-top:12px;">ثم توجد أماكن أقل شيوعًا:</p>
+    <p>🥚 المبيض | 👶 عنق الرحم | 🫄 البطن. لكن كلها نادرة.</p>
+  </div>
+
+  <!-- لماذا يحدث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🧬</div>
+    لماذا يحدث الحمل خارج الرحم؟
+  </div>
+  <div class="card">
+    <p>الإجابة البسيطة: الجنين لم يستطع الوصول إلى الرحم.</p>
+    <p style="margin-top:12px;">السؤال الحقيقي: لماذا؟</p>
+    <p style="margin-top:12px;"><strong>السبب الأول: 🦠 PID</strong> - Pelvic Inflammatory Disease. أشهر نقطة بالامتحانات. العدوى تتلف الشعيرات التي تدفع البويضة، فتتباطأ الرحلة.</p>
+    <p><strong>🔪 Tubal surgery</strong> - أي عملية سابقة قد تترك ندبات تضيق الطريق.</p>
+    <p><strong>🌸 Endometriosis</strong> - قد تسبب التصاقات تمنع حركة البويضة.</p>
+    <p><strong>🚬 Smoking</strong> - يبطئ حركة الأهداب داخل قناة فالوب.</p>
+    <p><strong>🤰 IUCD</strong> - إذا حدث حمل مع وجوده، تزداد نسبة أن يكون خارج الرحم.</p>
+  </div>
+
+  <!-- Risk Factors -->
+  <div class="card">
+    <strong>⚠️ Risk Factors:</strong>
+    <p>احفظيها بفكرة واحدة: أي شيء يخرب قناة فالوب يزيد الخطر.</p>
+    <p>✔ PID | ✔ عمليات | ✔ حمل خارج الرحم سابق | ✔ Endometriosis | ✔ Smoking | ✔ عقم وعلاجه.</p>
+  </div>
+
+  <!-- Pathophysiology -->
+  <div class="card">
+    <strong>🧪 Pathophysiology:</strong>
+    <p>إخصاب ⬇️ الجنين يتأخر ⬇️ يغرس نفسه داخل القناة ⬇️ المشيمة تكبر ⬇️ القناة تتمدد ⬇️ ثم تتمزق ⬇️ نزيف داخلي ⬇️ Shock.</p>
+  </div>
+
+  <!-- الأعراض -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🩺</div>
+    الأعراض
+  </div>
+  <div class="card">
+    <p>هذه من أهم أجزاء المحاضرة.</p>
+    <p>إذا جاءت امرأة في سن الإنجاب وقالت:</p>
+    <p>"دورتي متأخرة."</p>
+    <p>ثم قالت: "بطني تؤلمني."</p>
+    <p>ثم قالت: "عندي نزيف."</p>
+    <p>فكري مباشرة في: 🎯 <strong>Ectopic pregnancy.</strong></p>
+    <p style="margin-top:12px;">هذا هو الثلاثي المشهور:</p>
+    <p>✅ <strong>Amenorrhea.</strong></p>
+    <p>✅ <strong>Lower abdominal pain.</strong></p>
+    <p>✅ <strong>Vaginal bleeding.</strong></p>
+    <p style="margin-top:12px;">لكن... هناك علامة ذكية جدًا:</p>
+    <p><strong>Shoulder tip pain.</strong></p>
+    <p>ليش الكتف؟! 🤨 لأن الدم عندما يملأ البطن يصل إلى الحجاب الحاجز، والحجاب الحاجز يشترك في أعصاب مع الكتف. فيشعر المريض بألم في الكتف. اسمه: <strong>Referred pain.</strong> هذه نقطة يحبها الدكاترة. 😏</p>
+    <p style="margin-top:12px;">إذا تمزقت القناة... ستظهر:</p>
+    <p>😨 Pallor | 😵 Dizziness | 😵‍💫 Syncope | 💔 Shock.</p>
+  </div>
+
+  <!-- الفحص والتشخيص -->
+  <div class="card">
+    <strong>🔍 الفحص:</strong> ألم عند لمس البطن، كتلة قرب المبيض أحيانًا، وألم شديد عند تحريك عنق الرحم (Cervical motion tenderness).
+    <p style="margin-top:12px;"><strong>🔬 التشخيص:</strong></p>
+    <p>1. Pregnancy test → <strong>Positive.</strong></p>
+    <p>2. Ultrasound → رحم فارغ + Adnexal mass أو Free fluid.</p>
+    <p>3. β-hCG → يرتفع ببطء أو بشكل غير طبيعي.</p>
+  </div>
+
+  <!-- نوعان -->
+  <div class="grid-2col">
+    <div class="card" style="border-color:#fcd34d;">
+      <strong>🟡 Unruptured</strong>
+      <p>القناة لم تتمزق. الأم مستقرة. النزيف بسيط. أفضل مرحلة لاكتشاف الحالة.</p>
+    </div>
+    <div class="card" style="border-color:#fca5a5;">
+      <strong>🔴 Ruptured</strong>
+      <p>💥 تمزق. 🩸 نزيف داخلي. 😵 Shock. Emergency.</p>
+    </div>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="card">
+    <strong>💔 المضاعفات:</strong> 🩸 Massive hemorrhage | 😵 Shock | ❌ Infertility | 🔁 تكرار الحمل خارج الرحم | 💔 Maternal death.
+  </div>
+
+  <!-- العلاج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">💊</div>
+    العلاج
+  </div>
+  <div class="card">
+    <p>يعتمد على سؤال واحد: هل القناة انفجرت أم لا؟</p>
+    <p style="margin-top:12px;"><strong>إذا لم تنفجر:</strong> 💊 <strong>Methotrexate</strong> - يوقف انقسام خلايا الحمل. يجب أن تكون: ✔ مستقرة | ✔ الكتلة صغيرة | ✔ لا يوجد نبض جنيني.</p>
+    <p style="margin-top:12px;"><strong>إذا انفجرت:</strong> انتهى وقت الأدوية. الآن غرفة العمليات.</p>
+    <p><strong>Salpingostomy</strong> - نزيل الحمل ونترك القناة.</p>
+    <p><strong>Salpingectomy</strong> - إذا كانت القناة مدمرة أو النزيف شديدًا... تزال بالكامل.</p>
+    <p><strong>Laparoscopy</strong> - إذا الحالة مستقرة.</p>
+    <p><strong>Laparotomy</strong> - إذا النزيف شديد.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Nursing Management -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    Nursing Management 🩺
+  </div>
+  <div class="card">
+    <p>أنتِ كممرضة أول ما يهمك ليس اسم العملية... بل حياة الأم.</p>
+    <p style="margin-top:12px;"><strong>أولًا:</strong> راقبي ❤️ Pulse | 🩸 BP | 🌡 Temperature | 🫁 Respiratory rate. أي علامة صدمة؟ بلغي فورًا.</p>
+    <p><strong>ثانيًا:</strong> قدري كمية النزيف. حتى لو النزيف الخارجي قليل... قد يكون النزيف الحقيقي داخل البطن.</p>
+    <p><strong>ثالثًا:</strong> IV fluids لأنها قد تفقد كمية كبيرة من الدم.</p>
+    <p><strong>رابعًا:</strong> حضريها للجراحة إذا احتاجت. ولا تنسي تجهيز الدم إذا طلب الطبيب.</p>
+    <p><strong>خامسًا:</strong> راقبي Hb لأن النزيف قد يسبب أنيميا.</p>
+    <p><strong>سادسًا:</strong> الدعم النفسي. هي لم تفقد حملًا فقط... بل قد تفقد إحدى قناتي فالوب، وقد تخاف من الحمل مستقبلًا. الكلمات الهادئة والشرح الواضح جزء من العلاج.</p>
+  </div>
+
+  <!-- Prevention -->
+  <div class="card">
+    <strong>🛡️ Prevention:</strong>
+    <p>🌸 علاج PID مبكرًا | 🩺 مراجعة الحمل مبكرًا | 🚭 ترك التدخين | ❤️ ممارسة علاقات آمنة لتقليل العدوى المنقولة جنسيًا.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- أسهل طريقة للحفظ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🧠</div>
+    🧠 أسهل طريقة للحفظ
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>اسألي نفسك سؤالًا واحدًا:</p>
+    <p style="font-weight:700;">"أين زرع الجنين نفسه؟"</p>
+    <p style="margin-top:12px;">إذا كان داخل الرحم ✅ حمل طبيعي.</p>
+    <p>إذا كان خارج الرحم ❌ لن يجد مكانًا يتسع له.</p>
+    <p>سيكبر... ويضغط... ثم يمزق المكان... ثم يحدث النزيف الداخلي.</p>
+    <p style="margin-top:12px;">ولهذا تحفظين السلسلة كلها:</p>
+    <p>Implantation خارج الرحم → نمو داخل قناة ضيقة → Rupture → Internal hemorrhage → Hypovolemic shock → Emergency surgery أو Methotrexate إذا اكتُشف مبكرًا.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">🍿 وهكذا نكون قد أنهينا قصة الحمل خارج الرحم كاملة. كلما فهمتِ التسلسل، قلّ حفظك وزادت درجاتك. 👑</p>
+
+</div>
+</body>
+</html>

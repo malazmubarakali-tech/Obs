@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة المخاض المتعسر | Obstructed Labour Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🚪👶🏻💥</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة المخاض المتعسر</h1>
+  <p>Obstructed Labour · بكالوريوس التمريض - الدفعة الأولى 💥</p>
+</div>
+
+<div class="container">
+
+  <!-- تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎬</div>
+    🎬 الحلقة السادسة: Obstructed Labour
+  </div>
+  <div class="card">
+    <p>هذه المحاضرة أحبها جدًا لأنها تكملة مباشرة لـ Normal Labour.</p>
+    <p>في الحلقة الأولى رأينا كيف يولد الطفل عندما يتعاون الجميع...</p>
+    <p>اليوم سنرى ماذا يحدث عندما يقرر أحدهم أن يعاند. 😑</p>
+    <p style="margin-top:12px; font-weight:700;">"الطفل يريد الخروج... لكنه عالق."</p>
+    <p style="margin-top:12px;">هذه المحاضرة كلها يمكن تلخيصها بجملة واحدة:</p>
+    <p style="font-weight:700;">Power موجودة... لكن Passage أو Passenger فيهما مشكلة.</p>
+    <p style="margin-top:12px;">هل تذكرين الثلاثة P's من محاضرة Normal Labour؟</p>
+    <p>✅ Power (الطلق)</p>
+    <p>✅ Passage (الحوض)</p>
+    <p>✅ Passenger (الطفل)</p>
+    <p style="margin-top:12px;">اليوم...</p>
+    <p>الـPower يعمل 100%.</p>
+    <p>لكن...</p>
+    <p>🚪 الباب ضيق.</p>
+    <p>أو...</p>
+    <p>👶 الطفل وضعه غريب.</p>
+    <p style="margin-top:12px;">إذن...</p>
+    <p>الولادة لن تتقدم.</p>
+  </div>
+
+  <!-- تخيلي هذا المشهد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎭</div>
+    🎭 تخيلي هذا المشهد
+  </div>
+  <div class="card">
+    <p>🚪 باب عرضه 60 سم.</p>
+    <p>📦 صندوق عرضه 80 سم.</p>
+    <p style="margin-top:12px;">شخصان من الداخل يدفعان بكل قوتهم.</p>
+    <p>هل سيخرج؟</p>
+    <p style="margin-top:12px;">لا.</p>
+    <p>بل سيعلق أكثر.</p>
+    <p style="margin-top:12px;">هذا بالضبط هو</p>
+    <p>Obstructed Labour.</p>
+  </div>
+
+  <!-- التعريف -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#db2777,#be185d);">🌸</div>
+    🌸 التعريف
+  </div>
+  <div class="card">
+    <p>لا تحفظيه.</p>
+    <p>افهميه.</p>
+    <p style="font-weight:700;">Strong contractions...</p>
+    <p style="margin-top:12px;">لكن...</p>
+    <p>❌ No descent.</p>
+    <p style="margin-top:12px;">يعني الرحم يؤدي واجبه...</p>
+    <p>لكن يوجد حاجز ميكانيكي.</p>
+  </div>
+
+  <!-- السؤال الذهبي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🧠</div>
+    🧠 السؤال الذهبي
+  </div>
+  <div class="card">
+    <p>إذا كانت الانقباضات قوية...</p>
+    <p>فلماذا لم يخرج الطفل؟</p>
+    <p style="margin-top:12px;">الجواب سيكون واحدًا من ثلاثة.</p>
+  </div>
+
+  <!-- أول متهم -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🚪</div>
+    🚪 أول متهم... الأم (Passage)
+  </div>
+  <div class="card">
+    <p>الحوض صغير.</p>
+    <p>أو...</p>
+    <p>يوجد ورم.</p>
+    <p>أو...</p>
+    <p>Fibroid.</p>
+    <p style="margin-top:12px;">يعني...</p>
+    <p>الطريق ضيق.</p>
+  </div>
+
+  <!-- المتهم الثاني -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">👶</div>
+    👶 المتهم الثاني... الطفل
+  </div>
+  <div class="card">
+    <p>قد يكون:</p>
+    <p style="margin-top:12px;">Breech.</p>
+    <p>Shoulder.</p>
+    <p>Brow.</p>
+    <p>Occipito-posterior.</p>
+    <p>Macrosomia.</p>
+    <p>Hydrocephalus.</p>
+    <p style="margin-top:12px;">كلها تعني شيئًا واحدًا.</p>
+    <p>👶 الطفل لا يمر بسهولة.</p>
+  </div>
+
+  <!-- أشهر سبب -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">💥</div>
+    💥 أشهر سبب في الامتحان
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>⭐ <strong>CPD</strong></p>
+    <p>Cephalopelvic Disproportion.</p>
+    <p style="margin-top:12px;">يعني...</p>
+    <p>🧠 رأس الطفل</p>
+    <p>أكبر من</p>
+    <p>🦴 حوض الأم.</p>
+    <p style="margin-top:12px;">تخيلي تحاولين إدخال كرة سلة داخل كوب شاي.</p>
+    <p>المشكلة ليست في الدفع...</p>
+    <p>بل في الحجم. 😂</p>
+  </div>
+
+  <!-- ماذا يحدث بعد ساعات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🎬</div>
+    🎬 ماذا يحدث بعد ساعات؟
+  </div>
+  <div class="card">
+    <p>الرحم يقول:</p>
+    <p style="font-weight:700;">"سأدفع أكثر!"</p>
+    <p style="margin-top:12px;">💪💪💪</p>
+    <p>ثم أكثر...</p>
+    <p>💪💪💪</p>
+    <p>ثم أكثر...</p>
+    <p>💪💪💪</p>
+    <p style="margin-top:12px;">لكن الطفل لا يتحرك.</p>
+    <p>فتبدأ الكوارث.</p>
+  </div>
+
+  <!-- Pathophysiology -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🌸</div>
+    🌸 Pathophysiology
+  </div>
+  <div class="card">
+    <p>Strong contractions</p>
+    <p>⬇</p>
+    <p>No progress</p>
+    <p>⬇</p>
+    <p>الأم تتعب.</p>
+    <p>⬇</p>
+    <p>يصيبها الجفاف.</p>
+    <p>⬇</p>
+    <p>الطفل يقل أكسجينه.</p>
+    <p>⬇</p>
+    <p>يظهر</p>
+    <p>Bandl's Ring.</p>
+    <p>⬇</p>
+    <p>قد ينفجر الرحم.</p>
+    <p style="margin-top:12px;">انتهت المحاضرة تقريبًا. 😂</p>
+  </div>
+
+  <!-- Bandl's Ring -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">😈</div>
+    😈 Bandl's Ring
+  </div>
+  <div class="card">
+    <p>هذا الاسم يخيف الطلاب بلا سبب.</p>
+    <p style="margin-top:12px;">تخيلي الرحم...</p>
+    <p>يشد...</p>
+    <p>ويشد...</p>
+    <p>ويشد...</p>
+    <p>حتى يظهر خط واضح بين الجزء العلوي والسفلي.</p>
+    <p style="margin-top:12px;">هذا هو</p>
+    <p>Bandl's Ring.</p>
+    <p style="margin-top:12px;">وهو...</p>
+    <p>🚨 <strong>علامة خطر.</strong></p>
+    <p>لأن الخطوة التالية قد تكون:</p>
+    <p>💥 Uterine rupture.</p>
+  </div>
+
+  <!-- كيف تأتي المريضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🌸</div>
+    🌸 كيف تأتي المريضة؟
+  </div>
+  <div class="card">
+    <p>أول شيء...</p>
+    <p>⏰ Labor طويل جدًا.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>😭 ألم شديد.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>🥵 Exhaustion.</p>
+    <p>🥤 Dehydration.</p>
+    <p>🚽 Bladder ممتلئة.</p>
+    <p>🤒 Fever.</p>
+    <p style="margin-top:16px;"><strong>الطفل؟</strong></p>
+    <p>👶 يبدأ يختنق.</p>
+    <p>فتجدين:</p>
+    <p>❤️ FHR abnormal.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>قد يموت داخل الرحم.</p>
+  </div>
+
+  <!-- الفحص -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🔍</div>
+    الفحص
+  </div>
+  <div class="card">
+    <p>ستلاحظين:</p>
+    <p>❌ الطفل لا ينزل.</p>
+    <p>رغم الطلق.</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>عنق الرحم يبدأ يتورم.</p>
+    <p>Edematous cervix.</p>
+    <p style="margin-top:12px;">ورأس الطفل يصبح منتفخًا.</p>
+    <p>Caput succedaneum.</p>
+    <p style="margin-top:12px;">والعظام تبدأ تتراكب.</p>
+    <p>Molding.</p>
+    <p style="margin-top:12px;">💡 طريقة الحفظ:</p>
+    <p>Caput = تورم في فروة رأس الطفل.</p>
+    <p>Molding = تراكب عظام الجمجمة بسبب الضغط المستمر.</p>
+  </div>
+
+  <!-- التشخيص -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">📈</div>
+    التشخيص
+  </div>
+  <div class="card">
+    <p>كله يدور حول سؤال:</p>
+    <p>هل الولادة تتقدم؟</p>
+    <p style="margin-top:12px;">إذا لا...</p>
+    <p>والطلق قوي...</p>
+    <p>فابدئي تشكين في</p>
+    <p>Obstructed Labour.</p>
+    <p style="margin-top:12px;">وأهم أداة؟</p>
+    <p>📈 <strong>Partograph.</strong></p>
+    <p style="margin-top:12px;">هل تذكرينه من Normal Labour؟</p>
+    <p>هناك كنا نراقب تقدم الولادة...</p>
+    <p>هنا هو الذي يخبرنا:</p>
+    <p style="font-weight:700;">"توقفي... الولادة لم تعد طبيعية."</p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#7f1d1d);">💔</div>
+    المضاعفات
+  </div>
+  <div class="grid-2col">
+    <div class="card" style="border-color:#fca5a5;">
+      <strong>للأم</strong>
+      <p style="margin-top:8px;">💥 Rupture.</p>
+      <p>🩸 PPH.</p>
+      <p>🦠 Sepsis.</p>
+      <p>😢 Obstetric fistula.</p>
+      <p>☠ Death.</p>
+    </div>
+    <div class="card" style="border-color:#93c5fd;">
+      <strong>للطفل</strong>
+      <p style="margin-top:8px;">🫁 Asphyxia.</p>
+      <p>🧠 Brain damage.</p>
+      <p>☠ Stillbirth.</p>
+      <p>Neonatal death.</p>
+    </div>
+  </div>
+  <div class="card">
+    <p>لاحظي أن أغلبها بسبب شيء واحد:</p>
+    <p>الطفل ظل محشورًا فترة طويلة.</p>
+  </div>
+
+  <!-- العلاج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">💊</div>
+    العلاج
+  </div>
+  <div class="card">
+    <p>هل الطفل حي؟</p>
+    <p>✅ نعم.</p>
+    <p>🚑 Cesarean Section.</p>
+    <p style="margin-top:14px;">هل الطفل مات؟</p>
+    <p>للأسف...</p>
+    <p>قد تُستخدم عمليات خاصة لإخراجه إذا كانت الأنسب للأم في تلك الظروف (مثل embryotomy في الحالات النادرة جدًا وبواسطة مختصين).</p>
+    <p style="margin-top:14px;">أما إذا كانت الحالة مناسبة جدًا...</p>
+    <p>قد يستخدم الطبيب</p>
+    <p>Vacuum</p>
+    <p>أو</p>
+    <p>Forceps.</p>
+    <p style="margin-top:12px;">لكن ليس في كل الحالات.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Nursing Management -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    Nursing Management
+  </div>
+  <div class="card">
+    <p>إذا دخلتِ على هذه المريضة...</p>
+    <p>ماذا سأفعل؟</p>
+    <p style="margin-top:12px;">💧 IV.</p>
+    <p>❤️ Vital signs.</p>
+    <p>👶 FHR.</p>
+    <p>🥤 Hydration.</p>
+    <p>🤍 Support.</p>
+    <p>🚑 جهزي العملية.</p>
+    <p style="margin-top:12px;">كلها منطقية.</p>
+  </div>
+
+  <!-- Nursing Diagnoses -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">📋</div>
+    Nursing Diagnoses
+  </div>
+  <div class="card">
+    <p>كلها ترجع إلى ست كلمات:</p>
+    <p style="margin-top:12px;">😖 Pain.</p>
+    <p>🦠 Infection.</p>
+    <p>💧 Dehydration.</p>
+    <p>😰 Anxiety.</p>
+    <p>🩹 Tissue injury.</p>
+    <p>👶 Fetal injury.</p>
+    <p style="margin-top:12px;">لا تحفظيها كسطور.</p>
+    <p>احفظي المشاكل.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الربط مع Normal Labour -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">👑</div>
+    👑 الربط مع Normal Labour
+  </div>
+  <div class="card">
+    <div class="grid-2col">
+      <div style="border:2px solid #86efac; border-radius:16px; padding:14px; background:#f0fdf4;">
+        <strong style="color:#059669;">🌸 Normal Labour</strong>
+        <p style="margin-top:6px;">الطفل ينزل تدريجيًا</p>
+        <p>الولادة تتقدم</p>
+        <p>الطلق مفيد</p>
+        <p>الأم مرتاحة نسبيًا</p>
+        <p>الطفل بخير</p>
+        <p>ولادة طبيعية</p>
+      </div>
+      <div style="border:2px solid #fca5a5; border-radius:16px; padding:14px; background:#fff5f5;">
+        <strong style="color:#dc2626;">💥 Obstructed Labour</strong>
+        <p style="margin-top:6px;">الطفل لا ينزل</p>
+        <p>الولادة تتوقف</p>
+        <p>الطلق موجود لكنه لا يحل المشكلة</p>
+        <p>Exhaustion + Dehydration</p>
+        <p>Fetal distress</p>
+        <p>غالبًا Cesarean</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ربطها بكل ما سبق -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🎬</div>
+    🎬 وربطها بكل ما سبق
+  </div>
+  <div class="card">
+    <p>لاحظي جمال القصة:</p>
+    <p style="margin-top:12px;">🌸 Normal Labour</p>
+    <p>⬇</p>
+    <p>💥 Obstructed Labour (الولادة فشلت)</p>
+    <p>⬇</p>
+    <p>🩸 PPH (قد يحدث بعد ذلك بسبب طول الولادة أو تمزق الرحم)</p>
+    <p style="margin-top:12px;">يعني حتى هذه المحاضرة رجعت وربطت نفسها مع PPH التي درستِها.</p>
+  </div>
+
+  <!-- الجملة الذهبية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎯</div>
+    🎯 الجملة التي ستجعلك تتذكرين الدرس كله
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p style="font-size:18px; font-weight:900;">إذا كان الطلق قويًا والطفل لا ينزل... لا تزيدي الدفع، ابحثي عن العائق.</p>
+    <p style="margin-top:12px;">لأن المشكلة ليست في قوة الرحم، بل في وجود شيء يمنع المرور.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">💃 وهكذا نكون قد ربطنا Obstructed Labour بكل ما سبق. القصة تكتمل أكثر مع كل محاضرة. 👑</p>
+
+</div>
+</body>
+</html>

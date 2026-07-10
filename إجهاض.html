@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة الإجهاض | Abortion Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">💔🚪🩸</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة الإجهاض</h1>
+  <p>Abortion · بكالوريوس التمريض - الدفعة الأولى 💔</p>
+</div>
+
+<div class="container">
+
+  <!-- الفصل الأول: بداية الحمل -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🎬</div>
+    🎬 الفصل الأول: بداية الحمل
+  </div>
+  <div class="card">
+    <p>تخيلي امرأة اكتشفت أنها حامل. 🌸</p>
+    <p>البويضة اتلقحت، نزلت للرحم، وانغرست في بطانة الرحم.</p>
+    <p>كل شيء جميل...</p>
+    <p>الجسم مباشرة يفرز <strong>Progesterone</strong>.</p>
+    <p style="margin-top:12px;">اسألي نفسك...</p>
+    <p>ليش البروجسترون مهم؟</p>
+    <p>لأنه الحارس الشخصي للجنين. 🛡️</p>
+    <p style="margin-top:12px;">وظيفته:</p>
+    <p>✅ يحافظ على بطانة الرحم.</p>
+    <p>✅ يثبت المشيمة.</p>
+    <p>✅ يمنع الرحم من الانقباض.</p>
+    <p style="margin-top:12px;">كأنه يقول للرحم:</p>
+    <p style="font-weight:700;">"اهدأ... عندنا ضيف لمدة 9 شهور."</p>
+    <p style="margin-top:16px;">لكن...</p>
+    <p>أي سبب يخلي الجنين يموت أو المشيمة تنفصل...</p>
+    <p>يبدأ كل شيء ينهار.</p>
+    <p>يموت الجنين...</p>
+    <p>⬇️</p>
+    <p>ينخفض Progesterone.</p>
+    <p>⬇️</p>
+    <p>الرحم يقول: "خلص؟ إذن أفرغ المحتويات."</p>
+    <p>⬇️</p>
+    <p>ينقبض.</p>
+    <p>⬇️</p>
+    <p>عنق الرحم يبدأ يفتح.</p>
+    <p>⬇️</p>
+    <p>ينزل الدم.</p>
+    <p>⬇️</p>
+    <p>تخرج أنسجة الحمل.</p>
+    <p style="margin-top:12px;">وهذا هو...</p>
+    <p style="font-weight:700;">Abortion</p>
+    <p>يعني إنهاء الحمل قبل قدرة الجنين على الحياة.</p>
+    <p>عادة قبل 20 أسبوع أو إذا الوزن أقل من 500 g.</p>
+  </div>
+
+  <!-- أنواع الإجهاض - تمهيد -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🚪</div>
+    أنواع الإجهاض
+  </div>
+  <div class="card">
+    <p>تخيلي الباب هو عنق الرحم. 🚪</p>
+    <p style="margin-top:12px;">كل الأنواع تعتمد على سؤال واحد فقط:</p>
+    <p style="font-weight:700;">هل الباب مفتوح أم مقفل؟ وهل كل شيء خرج أم لا؟</p>
+    <p style="margin-top:12px;">إذا فهمتي هذين السؤالين... خلصتي نصف المحاضرة.</p>
+  </div>
+
+  <!-- 1. Threatened -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">①</div>
+    ① Threatened abortion
+  </div>
+  <div class="card">
+    <p>الاسم يعني:</p>
+    <p>الإجهاض "يهدد" فقط.</p>
+    <p>ليس مؤكداً.</p>
+    <p style="margin-top:12px;">المرأة تنزف.</p>
+    <p>لكن الباب...</p>
+    <p>🚪❌</p>
+    <p>مقفل.</p>
+    <p><strong>Cervix Closed</strong></p>
+    <p style="margin-top:12px;">يعني الحمل لسه عنده فرصة يعيش.</p>
+    <p style="margin-top:12px;"><strong>الأعراض:</strong></p>
+    <p>🩸 نزيف.</p>
+    <p>🤏 ألم بسيط أو بدون ألم.</p>
+    <p>🚪 العنق مغلق.</p>
+    <p>💓 الجنين غالباً حي.</p>
+    <p style="margin-top:12px;">هنا الطبيب يحاول يحافظ على الحمل.</p>
+    <p style="margin-top:12px;"><strong>العلاج:</strong></p>
+    <p>راحة.</p>
+    <p>متابعة.</p>
+    <p>تقليل المجهود.</p>
+    <p>Ultrasound.</p>
+    <p>مراقبة النزيف.</p>
+    <p>لا يوجد شيء خرج من الرحم.</p>
+  </div>
+
+  <!-- 2. Inevitable -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">②</div>
+    ② Inevitable abortion
+  </div>
+  <div class="card">
+    <p>الكلمة تعني...</p>
+    <p>"لا مفر."</p>
+    <p>الحمل انتهى.</p>
+    <p style="margin-top:12px;">ليش؟</p>
+    <p>لأن الباب انفتح.</p>
+    <p>🚪✅</p>
+    <p><strong>Cervix Open</strong></p>
+    <p style="margin-top:12px;">والرحم بدأ يطرد الحمل.</p>
+    <p>هنا لا يمكن إيقافه.</p>
+    <p style="margin-top:12px;"><strong>الأعراض:</strong></p>
+    <p>🩸 نزيف أكثر.</p>
+    <p>😖 مغص شديد.</p>
+    <p>🚪 عنق مفتوح.</p>
+    <p>قد ينزل السائل الأمنيوسي.</p>
+    <p style="margin-top:12px;">الحمل انتهى للأسف.</p>
+  </div>
+
+  <!-- 3. Incomplete -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">③</div>
+    ③ Incomplete abortion
+  </div>
+  <div class="card">
+    <p>الرحم اشتغل...</p>
+    <p>لكن كان كسولاً قليلاً. 🙄</p>
+    <p>طلع جزء...</p>
+    <p>وترك جزء.</p>
+    <p style="margin-top:12px;">يعني:</p>
+    <p>بعض منتجات الحمل خرجت.</p>
+    <p>وبعضها بقي داخل الرحم.</p>
+    <p>وهذا أخطر.</p>
+    <p style="margin-top:12px;">ليش؟</p>
+    <p>لأن الجزء الباقي يمنع الرحم من الانقباض.</p>
+    <p>فيستمر النزيف.</p>
+    <p>وقد يحدث التهاب.</p>
+    <p style="margin-top:12px;"><strong>الأعراض:</strong></p>
+    <p>🩸 نزيف شديد.</p>
+    <p>😣 مغص شديد.</p>
+    <p>🚪 العنق مفتوح.</p>
+    <p>Ultrasound يظهر بقايا داخل الرحم.</p>
+    <p style="margin-top:12px;"><strong>العلاج:</strong></p>
+    <p>إزالة البقايا.</p>
+    <p>إما: 💊 Misoprostol.</p>
+    <p>أو 🩺 Vacuum aspiration.</p>
+    <p>أو 🩺 D&C.</p>
+  </div>
+
+  <!-- 4. Complete -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">④</div>
+    ④ Complete abortion
+  </div>
+  <div class="card">
+    <p>هنا الرحم قال:</p>
+    <p>"خلصت شغلي بالكامل." 😌</p>
+    <p style="margin-top:12px;">كل شيء خرج.</p>
+    <p>لا يوجد أي بقايا.</p>
+    <p>الرحم يبدأ ينقبض.</p>
+    <p>النزيف يقل.</p>
+    <p>العنق يقفل تدريجياً.</p>
+    <p style="margin-top:12px;"><strong>الأعراض:</strong></p>
+    <p>كان فيه نزيف.</p>
+    <p>ثم توقف تقريباً.</p>
+    <p>الألم يقل.</p>
+    <p>Ultrasound... رحم فارغ.</p>
+  </div>
+
+  <!-- 5. Missed -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">⑤</div>
+    ⑤ Missed abortion
+  </div>
+  <div class="card">
+    <p>من أكثر الأنواع التي تُسأل في الامتحانات.</p>
+    <p style="margin-top:12px;">الجنين...</p>
+    <p>💔 مات.</p>
+    <p>لكن...</p>
+    <p>لم يخرج.</p>
+    <p style="margin-top:12px;">يعني الجسم لم يفهم الخبر بعد.</p>
+    <p>المرأة قد تظن أنها حامل.</p>
+    <p>لكن...</p>
+    <p>لا يوجد نبض.</p>
+    <p>لا يوجد نمو.</p>
+    <p>Ultrasound يظهر جنيناً بلا Heart beat.</p>
+    <p>قد لا يوجد نزيف أصلاً.</p>
+    <p style="margin-top:12px;"><strong>العلاج:</strong></p>
+    <p>إما الانتظار.</p>
+    <p>أو Misoprostol.</p>
+    <p>أو D&C.</p>
+    <p>حسب الحالة.</p>
+  </div>
+
+  <!-- 6. Septic -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">⑥</div>
+    ⑥ Septic abortion
+  </div>
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <p>هذا أخطر نوع.</p>
+    <p>هنا المشكلة ليست الإجهاض نفسه.</p>
+    <p>المشكلة...</p>
+    <p>العدوى. 🦠</p>
+    <p style="margin-top:12px;">كيف تدخل البكتيريا؟</p>
+    <p>قد يحدث:</p>
+    <p>إجهاض غير معقم.</p>
+    <p>بقايا حمل بقيت داخل الرحم.</p>
+    <p>أدوات ملوثة.</p>
+    <p style="margin-top:12px;">فتدخل البكتيريا.</p>
+    <p>⬇️</p>
+    <p>Endometritis.</p>
+    <p>⬇️</p>
+    <p>ثم قد تدخل الدم.</p>
+    <p>⬇️</p>
+    <p>Sepsis.</p>
+    <p>⬇️</p>
+    <p>Shock.</p>
+    <p>⬇️</p>
+    <p>DIC.</p>
+    <p>⬇️</p>
+    <p>وفاة إن لم يُعالج.</p>
+    <p style="margin-top:12px;"><strong>الأعراض:</strong></p>
+    <p>🤒 حرارة.</p>
+    <p>🥶 قشعريرة.</p>
+    <p>🤢 إفرازات كريهة.</p>
+    <p>🩸 نزيف.</p>
+    <p>😣 ألم شديد.</p>
+    <p>💓 Tachycardia.</p>
+    <p style="margin-top:12px;"><strong>العلاج:</strong></p>
+    <p>أولاً... Antibiotics فوراً.</p>
+    <p>مثل: 💉 Ampicillin | 💉 Gentamicin | 💉 Metronidazole</p>
+    <p>ثم إزالة البقايا من الرحم.</p>
+  </div>
+
+  <!-- 7. Recurrent -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">⑦</div>
+    ⑦ Recurrent abortion
+  </div>
+  <div class="card">
+    <p>ثلاث مرات أو أكثر...</p>
+    <p>إجهاض متتالي.</p>
+    <p><strong>≥3 consecutive abortions.</strong></p>
+    <p style="margin-top:12px;">هنا لا نقول "صدفة".</p>
+    <p>نبدأ نبحث عن السبب.</p>
+    <p>قد يكون:</p>
+    <p>Hormonal / Genetic / Uterine anomaly / Cervical incompetence / Autoimmune disease.</p>
+  </div>
+
+  <!-- 8. Induced -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">⑧</div>
+    ⑧ Induced abortion
+  </div>
+  <div class="card">
+    <p>هذا مقصود.</p>
+    <p>قد يكون:</p>
+    <p><strong>Therapeutic</strong> - لإنقاذ الأم.</p>
+    <p>أو</p>
+    <p><strong>Elective</strong> - بطلب المريضة حسب القوانين المحلية.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الأسباب -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🧬</div>
+    الأسباب (Causes)
+  </div>
+  <div class="card">
+    <p>الكتاب كتب قائمة طويلة... لكن كلها ترجع لفكرة واحدة.</p>
+    <p>إما المشكلة في:</p>
+    <p>👶 الجنين | 🏠 الرحم | 🌸 المشيمة | 👩 الأم.</p>
+    <p style="margin-top:12px;"><strong>أولاً: الجنين</strong> - Chromosomal abnormalities (أشهر سبب).</p>
+    <p><strong>ثانياً: الأم</strong> - سكري، ضغط، مرض الغدة، مرض الكلى.</p>
+    <p><strong>ثالثاً: الرحم</strong> - Fibroids, Congenital anomalies, Cervical incompetence.</p>
+    <p><strong>رابعاً: العدوى</strong> - TORCH, Malaria, Syphilis, HIV.</p>
+    <p><strong>خامساً: أسلوب الحياة</strong> - 🚬 Smoking, 🍺 Alcohol, 💊 Drugs, 🍽 سوء تغذية.</p>
+  </div>
+
+  <!-- عوامل الخطورة -->
+  <div class="card">
+    <strong>⚠️ عوامل الخطورة</strong>
+    <p>👵 عمر كبير | 📜 إجهاض سابق | 🤒 أمراض مزمنة | 🚬 تدخين | 🥗 سوء تغذية | 🩺 متابعة حمل سيئة.</p>
+  </div>
+
+  <!-- الأعراض -->
+  <div class="card">
+    <strong>🩺 الأعراض</strong>
+    <p>🩸 Vaginal bleeding | 😖 Lower abdominal pain | 💢 Back pain | وقد تنزل أنسجة.</p>
+    <p>إذا أضيف: 🤒 حرارة + 🤢 رائحة كريهة ← فكري مباشرة في Septic abortion.</p>
+  </div>
+
+  <!-- التشخيص -->
+  <div class="card">
+    <strong>🔬 التشخيص</strong>
+    <p>🩸 CBC | 🩸 β-hCG | 🩸 Blood group + Rh | 🧫 Culture إذا شكوا بعدوى | 📺 Ultrasound.</p>
+  </div>
+
+  <!-- العلاج -->
+  <div class="card">
+    <strong>💊 العلاج حسب النوع</strong>
+    <p><strong>Threatened:</strong> راحة ومراقبة.</p>
+    <p><strong>Incomplete / Missed:</strong> إفراغ الرحم (💊 Misoprostol أو 🩺 Vacuum أو 🩺 D&C).</p>
+    <p><strong>Septic:</strong> الأولوية إنقاذ الأم (💉 Antibiotics + 💧 IV fluids + 🩺 إزالة البقايا).</p>
+  </div>
+
+  <!-- Rh Immunoglobulin -->
+  <div class="card">
+    <strong>🩸 Rh Immunoglobulin</strong>
+    <p>إذا الأم Rh Negative... نعطيها Rh Immunoglobulin لمنع التحسس ضد دم الجنين في الحمل القادم.</p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="grid-2col">
+    <div class="card" style="border-color:#fca5a5;">
+      <strong>💔 مضاعفات مبكرة</strong>
+      <p>🩸 Hemorrhage | 🦠 Infection | 😵 Shock | 🧫 Sepsis | 🩸 DIC.</p>
+    </div>
+    <div class="card" style="border-color:#93c5fd;">
+      <strong>💔 مضاعفات متأخرة</strong>
+      <p>😔 Infertility | 🚪 Cervical incompetence | 💔 Psychological trauma | 🔁 Recurrent abortion | 🩹 Asherman syndrome.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Nursing Management -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    Nursing Management 🩺
+  </div>
+  <div class="card">
+    <p><strong>Assessment:</strong> 🩸 كمية النزيف | 🌡 الحرارة | ❤️ النبض | 🩺 الضغط | 😣 الألم | 🧪 Hb | علامات العدوى.</p>
+    <p style="margin-top:12px;"><strong>Nursing Diagnoses:</strong></p>
+    <p>1️⃣ Acute pain | 2️⃣ Risk for deficient fluid volume | 3️⃣ Anxiety | 4️⃣ Risk for infection | 5️⃣ Grieving.</p>
+    <p style="margin-top:12px;"><strong>Goals:</strong> 🎯 توقف النزيف | 🎯 استقرار العلامات الحيوية | 🎯 منع العدوى | 🎯 تخفيف الألم | 🎯 دعم نفسي.</p>
+    <p style="margin-top:12px;"><strong>Interventions:</strong> ✨ مراقبة Vital signs | ✨ تقدير كمية النزيف | ✨ إعطاء السوائل والأدوية | ✨ مراقبة علامات الصدمة | ✨ الحفاظ على التعقيم | ✨ دعم نفسي حقيقي.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- أسهل طريقة للحفظ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎯</div>
+    أسهل طريقة لحفظ الأنواع 🎯
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>🚪 <strong>Threatened</strong> = الباب مقفول، الحمل ما زال ممكن يكمل.</p>
+    <p>🚪 <strong>Inevitable</strong> = الباب مفتوح، لا يمكن إيقاف الإجهاض.</p>
+    <p>🧩 <strong>Incomplete</strong> = خرج جزء وبقي جزء.</p>
+    <p>✅ <strong>Complete</strong> = خرج كل شيء.</p>
+    <p>😶 <strong>Missed</strong> = الجنين مات لكنه ما زال داخل الرحم.</p>
+    <p>🦠 <strong>Septic</strong> = إجهاض مع عدوى.</p>
+    <p>🔁 <strong>Recurrent</strong> = ثلاثة إجهاضات متتالية أو أكثر.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">🎯 شطورة حبيبتي. 💋 . 👑</p>
+
+</div>
+</body>
+</html>

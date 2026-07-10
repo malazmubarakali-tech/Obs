@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة المشيمة الملتصقة | Placenta Accreta Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🩸🧱🚨</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة المشيمة الملتصقة</h1>
+  <p>Placenta Accreta · بكالوريوس التمريض - الدفعة الأولى 🩸</p>
+</div>
+
+<div class="container">
+
+  <!-- السر -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🔑</div>
+    💃💃💃 يلاااااا!
+  </div>
+  <div class="card">
+    <p>هذه من أكثر المحاضرات التي يخاف منها الطلاب، لكنها في الحقيقة تكملة مباشرة لـ Placenta Previa.</p>
+    <p style="margin-top:12px;">بل سأعطيك السر من البداية...</p>
+    <p style="margin-top:12px; font-weight:700;">Placenta previa = المشكلة قبل الولادة.</p>
+    <p style="font-weight:700;">Placenta accreta = المشكلة بعد الولادة.</p>
+    <p style="margin-top:12px;">انتهت المحاضرة. 😂</p>
+    <p>لا أمزح... لكنها فعلًا تدور حول هذه الفكرة.</p>
+  </div>
+
+  <!-- الفصل الأول -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">🎬</div>
+    🎬 الفصل الأول: ماذا حدث للمشيمة؟
+  </div>
+  <div class="card">
+    <p>في الولادة الطبيعية...</p>
+    <p>المشيمة تمسك الرحم برفق.</p>
+    <p>ثم بعد خروج الطفل...</p>
+    <p>تنفصل بسهولة.</p>
+    <p style="margin-top:12px;">Placenta</p>
+    <p>   │</p>
+    <p>──────────</p>
+    <p>Decidua basalis</p>
+    <p>──────────</p>
+    <p>Myometrium</p>
+    <p style="margin-top:12px;">الطبقة السحرية هنا اسمها</p>
+    <p>⭐ <strong>Decidua basalis</strong></p>
+    <p>وظيفتها:</p>
+    <p>تمنع المشيمة من الحفر داخل عضلة الرحم.</p>
+  </div>
+
+  <!-- ماذا حدث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">😈</div>
+    😈 ماذا حدث في Placenta Accreta؟
+  </div>
+  <div class="card">
+    <p>تخيلي أن هذه الطبقة اختفت.</p>
+    <p style="margin-top:12px;">Placenta</p>
+    <p>█████████</p>
+    <p>Myometrium</p>
+    <p style="margin-top:12px;">المشيمة قالت:</p>
+    <p style="font-weight:700;">"لن أكتفي بالجلوس... سأحفر داخل الجدار." 😑</p>
+    <p style="margin-top:12px;">ولهذا...</p>
+    <p>بعد الولادة...</p>
+    <p>الطبيب يحاول سحبها...</p>
+    <p>❌ لكنها لا تخرج.</p>
+  </div>
+
+  <!-- لماذا -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🌸</div>
+    🌸 لماذا؟
+  </div>
+  <div class="card">
+    <p>لأن السبب الأساسي هو:</p>
+    <p style="margin-top:12px;"><strong>Scar</strong></p>
+    <p>⬇</p>
+    <p><strong>Defect in decidua basalis</strong></p>
+    <p>⬇</p>
+    <p><strong>Placenta invades myometrium</strong></p>
+    <p>⬇</p>
+    <p><strong>Cannot separate</strong></p>
+    <p style="margin-top:12px;">إذا حفظت هذا السهم...</p>
+    <p>فقد حفظت Pathophysiology كلها.</p>
+  </div>
+
+  <!-- أنواع PAS -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🎯</div>
+    🎯 أنواع PAS
+  </div>
+  <div class="card">
+    <p>تخيلي طفلًا يحفر في الرمل.</p>
+    <p>كل مرة يحفر أعمق.</p>
+    <p style="margin-top:12px;">🟢 <strong>Accreta</strong></p>
+    <p>يلمس العضلة فقط.</p>
+    <p>Placenta</p>
+    <p>████</p>
+    <p>Muscle</p>
+    <p style="margin-top:12px;">🟡 <strong>Increta</strong></p>
+    <p>دخل داخل العضلة.</p>
+    <p>Placenta</p>
+    <p>██████</p>
+    <p>Muscle</p>
+    <p style="margin-top:12px;">🔴 <strong>Percreta</strong></p>
+    <p>خرج من الجهة الثانية! 😭</p>
+    <p>Placenta</p>
+    <p>████████████</p>
+    <p>Muscle</p>
+    <p>████████████</p>
+    <p>⬇</p>
+    <p>Bladder</p>
+    <p style="margin-top:12px;">وقد يصل إلى</p>
+    <p>🫧 Bladder</p>
+    <p>أو</p>
+    <p>🦠 Bowel</p>
+    <p>لهذا هو أخطر نوع.</p>
+    <p style="margin-top:12px;">💡 طريقة الحفظ:</p>
+    <p>Accreta = Attach (التصاق).</p>
+    <p>Increta = Into (دخل إلى العضلة).</p>
+    <p>Percreta = Penetrates through (اخترق بالكامل).</p>
+  </div>
+
+  <!-- لماذا يحدث -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🌸</div>
+    🌸 لماذا يحدث؟
+  </div>
+  <div class="card">
+    <p>أكثر سؤال منطقي.</p>
+    <p>اسألي نفسك...</p>
+    <p>من الذي يجرح بطانة الرحم؟</p>
+    <p style="margin-top:12px;">✔ Cesarean section.</p>
+    <p>✔ Previous uterine surgery.</p>
+    <p>✔ Endometritis.</p>
+    <p>✔ IVF.</p>
+    <p>✔ Age >35.</p>
+    <p style="margin-top:12px;">لكن...</p>
+    <p>أهم عامل؟</p>
+    <p>🥇 <strong>Previous Cesarean.</strong></p>
+  </div>
+
+  <!-- علاقة Placenta Previa -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🌸</div>
+    🌸 علاقة Placenta Previa؟
+  </div>
+  <div class="card">
+    <p>هذه نقطة يعشقها الدكاترة.</p>
+    <p style="margin-top:12px;">إذا كانت المرأة لديها</p>
+    <p>Placenta Previa</p>
+    <p>+</p>
+    <p>Previous CS</p>
+    <p>⬇⬇⬇</p>
+    <p>يزداد احتمال</p>
+    <p>Placenta Accreta</p>
+    <p>بشكل كبير.</p>
+    <p style="margin-top:12px;">يعني المحاضرتان مرتبطتان جدًا.</p>
+  </div>
+
+  <!-- لماذا يحدث PPH -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🌸</div>
+    🌸 لماذا يحدث PPH؟
+  </div>
+  <div class="card">
+    <p>هذه أهم نقطة بالمحاضرة.</p>
+    <p style="margin-top:12px;">بعد الولادة...</p>
+    <p>الطبيب يريد إخراج المشيمة.</p>
+    <p>لكنها ملتصقة.</p>
+    <p>إذا حاول سحبها...</p>
+    <p>🩸🩸🩸</p>
+    <p>Massive hemorrhage.</p>
+    <p style="margin-top:12px;">ولهذا تعتبر</p>
+    <p>Placenta Accreta</p>
+    <p>من أهم أسباب</p>
+    <p>⭐ <strong>Postpartum Hemorrhage.</strong></p>
+  </div>
+
+  <!-- استئصال الرحم -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#7f1d1d);">🌸</div>
+    🌸 لماذا قد نستأصل الرحم؟
+  </div>
+  <div class="card">
+    <p>تخيلي...</p>
+    <p>المشيمة لا تخرج.</p>
+    <p>والنزيف لا يتوقف.</p>
+    <p>ماذا نفعل؟</p>
+    <p style="margin-top:12px;">أحيانًا...</p>
+    <p>لا يوجد حل إلا:</p>
+    <p>✂ <strong>Hysterectomy.</strong></p>
+    <p style="margin-top:12px;">وهذا يعني...</p>
+    <p>فقدان القدرة على الحمل مستقبلًا.</p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🌸</div>
+    🌸 المضاعفات
+  </div>
+  <div class="card">
+    <p>كلها نتيجة للنزيف أو الجراحة.</p>
+    <p style="margin-top:12px;">🩸 Massive PPH</p>
+    <p>⬇</p>
+    <p>Blood transfusion</p>
+    <p>⬇</p>
+    <p>DIC</p>
+    <p>⬇</p>
+    <p>Organ failure</p>
+    <p>⬇</p>
+    <p>Death</p>
+    <p style="margin-top:12px;">أو</p>
+    <p>الجراحة نفسها قد تسبب:</p>
+    <p>✔ إصابة المثانة.</p>
+    <p>✔ إصابة الأمعاء.</p>
+    <p>✔ Infection.</p>
+    <p>✔ Adhesions.</p>
+    <p>✔ ألم مزمن.</p>
+    <p>✔ مشاكل نفسية.</p>
+    <p style="margin-top:12px;">لاحظي أن كل المضاعفات تدور حول نزيف شديد + عملية كبيرة.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- التدبير التمريضي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👩‍⚕️</div>
+    👩‍⚕️ Nursing Management
+  </div>
+  <div class="card">
+    <p>اسألي نفسك دائمًا:</p>
+    <p>أنا أعرف أن هذه الأم معرضة لنزيف كارثي... ماذا أجهز؟</p>
+    <p style="margin-top:16px; font-weight:700;">قبل العملية</p>
+    <p>لا أفكر أولًا في الدواء.</p>
+    <p>أفكر في:</p>
+    <p>🩸 الدم.</p>
+    <p>لهذا أول الأشياء:</p>
+    <p>✔ Two large IV lines (16-18G).</p>
+    <p>✔ Type & Cross-match.</p>
+    <p>✔ تجهيز وحدات دم.</p>
+    <p>✔ مراقبة Vital signs.</p>
+    <p>✔ FHR.</p>
+    <p>✔ شرح احتمال استئصال الرحم ودعمها نفسيًا.</p>
+    <p style="margin-top:16px; font-weight:700;">أثناء العملية</p>
+    <p>المهمة الأساسية:</p>
+    <p>هل النزيف تحت السيطرة؟</p>
+    <p>راقبي:</p>
+    <p>🩸 كمية الدم بدقة.</p>
+    <p>كوني جاهزة لتفعيل</p>
+    <p>Massive Transfusion Protocol (MTP)</p>
+    <p>إذا تحول الوضع إلى نزيف شديد.</p>
+    <p style="margin-top:16px; font-weight:700;">بعد العملية</p>
+    <p>الآن أخاف من:</p>
+    <p>🩸 Shock.</p>
+    <p>لذلك أراقب:</p>
+    <p>❤️ Pulse.</p>
+    <p>🩸 BP.</p>
+    <p>🧊 برودة الأطراف.</p>
+    <p>🚽 Urine output.</p>
+    <p>ثم:</p>
+    <p>✔ الجرح.</p>
+    <p>✔ الألم.</p>
+  </div>
+
+  <!-- التشخيصات التمريضية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🌸</div>
+    🌸 Nursing Diagnoses
+  </div>
+  <div class="card">
+    <p>لا تحفظيها كلمة كلمة.</p>
+    <p>هي كلها تدور حول خمس مشاكل:</p>
+    <p style="margin-top:12px;">🩸 Hemorrhage.</p>
+    <p>💧 Fluid loss.</p>
+    <p>🦠 Infection.</p>
+    <p>😖 Pain.</p>
+    <p>😢 Anxiety.</p>
+    <p style="margin-top:12px;">أي تدخل تمريضي سيعود إلى واحدة من هذه الخمس.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الخريطة الذهبية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">👑</div>
+    👑 الخريطة الذهبية
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>Scar</p>
+    <p>⬇</p>
+    <p>Defect in decidua</p>
+    <p>⬇</p>
+    <p>Placenta invades muscle</p>
+    <p>⬇</p>
+    <p>Placenta can't separate</p>
+    <p>⬇</p>
+    <p>Massive PPH</p>
+    <p>⬇</p>
+    <p>Blood transfusion</p>
+    <p>⬇</p>
+    <p>Sometimes Hysterectomy</p>
+    <p>⬇</p>
+    <p>Nursing = Prevent shock + Save mother</p>
+  </div>
+
+  <!-- المقارنة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🔥</div>
+    🔥 مقارنة تحفظ لك المحاضرتين
+  </div>
+  <div class="card">
+    <div class="grid-2col">
+      <div style="border:2px solid #fca5a5; border-radius:16px; padding:14px; background:#fff5f5;">
+        <strong style="color:#dc2626;">Placenta Previa</strong>
+        <p style="margin-top:6px;">📍 المشكلة: مكان المشيمة</p>
+        <p>🩸 النزيف غالبًا قبل الولادة</p>
+        <p>❌ لا تعملي Vaginal Exam</p>
+        <p>📺 التشخيص: Ultrasound</p>
+        <p>⚠️ الخطر: نزيف قبل الولادة</p>
+      </div>
+      <div style="border:2px solid #93c5fd; border-radius:16px; padding:14px; background:#f8faff;">
+        <strong style="color:#2563eb;">Placenta Accreta</strong>
+        <p style="margin-top:6px;">🧱 المشكلة: عمق التصاق المشيمة</p>
+        <p>🩸 النزيف غالبًا بعد الولادة</p>
+        <p>❌ لا تحاولي فصل المشيمة بالقوة</p>
+        <p>📺 التشخيص: Ultrasound (وأحيانًا وسائل تصوير إضافية حسب الحالة)</p>
+        <p>⚠️ الخطر: PPH واستئصال الرحم</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">😂 وأخيرًا... استمري بنفس الايقاع لكن لا تنخدعي بالحماس وتنسي الاستراحات. الدماغ مثل عضلة، حتى وهو متحمس يحتاج أنفاسًا قصيرة ليبقى في أفضل أداء. 👑💃</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة المخاض الطبيعي كاملة | Normal Labour Full Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #db2777 0%, #ec4899 30%, #f472b6 60%, #fbcfe8 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fce7f3;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(219,39,119,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fbcfe8, #fff0f5, #fbcfe8);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.15; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.25); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .story-box {
+    border-radius:20px; padding:18px; border:2px solid;
+    transition: all 0.3s; margin-bottom:14px;
+  }
+  .story-box:hover { transform: scale(1.01); }
+  .story-box .sb-header { font-weight:800; font-size:16px; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+  .story-box .sb-content { font-size:13px; color:var(--muted); }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #f472b6, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">👶🏻🌸🤰🏻</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة المخاض الطبيعي كاملة</h1>
+  <p>Normal Labour · بكالوريوس التمريض - الدفعة الأولى 🍼</p>
+</div>
+
+<div class="container">
+
+  <!-- الفصل الأول: من هو هذا الجنين؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">👶🏻</div>
+    🌸 الفصل الأول: من هو هذا الجنين؟
+  </div>
+  <div class="card">
+    <p>قبل أن يولد، يجب أن نصفه.</p>
+    <p style="margin-top:12px;"><strong>1. Presentation (من الذي ينزل أولاً؟)</strong></p>
+    <p>هو الجزء الذي يدخل الحوض أولاً.</p>
+    <p>👶 رأس = Cephalic ✅ (أفضل وضع)</p>
+    <p>🦵 مقعدة = Breech ❌</p>
+    <p style="margin-top:12px;"><strong>2. Lie (كيف يقف الطفل؟)</strong></p>
+    <p>علاقة جسم الطفل بجسم الأم.</p>
+    <p>📏 Longitudinal ✅</p>
+    <p>➖ Transverse ❌</p>
+    <p>↗️ Oblique ❌</p>
+    <p style="margin-top:12px;"><strong>3. Position (إلى أين ينظر الطفل؟)</strong></p>
+    <p>إذا كان رأسه للأسفل...</p>
+    <p>هل وجهه للأمام؟</p>
+    <p>للخلف؟</p>
+    <p>لليمين؟</p>
+    <p>لليسار؟</p>
+    <p>أفضل وضع:</p>
+    <p>⭐ Occipito-anterior (OA)</p>
+    <p style="margin-top:12px;"><strong>4. Denominator</strong></p>
+    <p>كل Presentation له نقطة مرجعية.</p>
+    <p>Vertex ➜ Occiput</p>
+    <p>Breech ➜ Sacrum</p>
+    <p>Face ➜ Mentum</p>
+    <p style="margin-top:12px;"><strong>5. Station</strong></p>
+    <p>كم بقي حتى يخرج الطفل؟</p>
+    <p>يقاس بالنسبة لـ Ischial spines</p>
+    <p>-5 بعيد جدًا</p>
+    <p>0 وصل للحوض</p>
+    <p>+5 خرج تقريبًا</p>
+    <p>كلما الرقم زاد...</p>
+    <p>كلما اقتربت الولادة.</p>
+    <p style="margin-top:12px;"><strong>6. Effacement</strong></p>
+    <p>قبل أن يفتح عنق الرحم...</p>
+    <p>يجب أن يصبح رقيقًا وقصيرًا.</p>
+    <p>💡 تذكريها:</p>
+    <p>Effacement = Thin</p>
+    <p>Dilatation = Open</p>
+  </div>
+
+  <!-- الفصل الثاني: متى نقول إنها ولادة طبيعية؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#db2777,#be185d);">✅</div>
+    🌸 الفصل الثاني: متى نقول إنها ولادة طبيعية؟
+  </div>
+  <div class="card">
+    <p>لكي نسميها Normal labour يجب أن تكون:</p>
+    <p>✅ حمل مكتمل.</p>
+    <p>✅ بدأت وحدها (Spontaneous).</p>
+    <p>✅ طفل واحد.</p>
+    <p>✅ رأسه للأسفل.</p>
+    <p>✅ Longitudinal lie.</p>
+    <p>✅ رأسه مثني (Flexion).</p>
+    <p>✅ يخرج من المهبل.</p>
+    <p>✅ لا توجد مضاعفات.</p>
+    <p>✅ تستغرق تقريبًا 3-24 ساعة.</p>
+    <p>إذا اختل شرط واحد...</p>
+    <p>ستدخلين في محاضرات OBS القادمة. 😏</p>
+  </div>
+
+  <!-- الفصل الثالث: من الذي بدأ الولادة؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🧪</div>
+    🌸 الفصل الثالث: من الذي بدأ الولادة؟
+  </div>
+  <div class="card">
+    <p>كل الهرمونات اجتمعت وكأنها فريق إنقاذ.</p>
+    <p>🟢 <strong>Estrogen</strong></p>
+    <p>⬆ يزيد حساسية الرحم.</p>
+    <p>🟢 <strong>Progesterone</strong></p>
+    <p>⬇ ينخفض.</p>
+    <p>🟢 <strong>Prostaglandin</strong></p>
+    <p>يشغل عضلات الرحم.</p>
+    <p>🟢 <strong>Oxytocin</strong></p>
+    <p>ملك الانقباضات.</p>
+    <p>🟢 <strong>Cortisol</strong></p>
+    <p>يزيد الإستروجين.</p>
+  </div>
+
+  <!-- الفصل الرابع: قاعدة الامتحان الذهبية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">👑</div>
+    🌸 الفصل الرابع: قاعدة الامتحان الذهبية
+  </div>
+  <div class="card">
+    <p>أي ولادة تعتمد على ثلاثة أشياء فقط.</p>
+    <p>الثلاثة P</p>
+    <p>🚪 <strong>Passage</strong></p>
+    <p>الحوض.</p>
+    <p>💪 <strong>Power</strong></p>
+    <p>انقباضات الرحم + دفع الأم.</p>
+    <p>👶 <strong>Passenger</strong></p>
+    <p>الطفل.</p>
+    <p>إذا تعطل واحد...</p>
+    <p>تعطلت الولادة.</p>
+  </div>
+
+  <!-- الفصل الخامس: رحلة الطفل للخروج -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🚼</div>
+    🌸 الفصل الخامس: رحلة الطفل للخروج
+  </div>
+  <div class="card">
+    <p>احفظيها كأنه طفل يحاول الهروب من باب صغير. 😂</p>
+    <p>1️⃣ <strong>Engagement</strong></p>
+    <p>دخل الحوض.</p>
+    <p>⬇</p>
+    <p>2️⃣ <strong>Descent</strong></p>
+    <p>بدأ ينزل.</p>
+    <p>⬇</p>
+    <p>3️⃣ <strong>Flexion</strong></p>
+    <p>ثنى رأسه.</p>
+    <p>⬇</p>
+    <p>4️⃣ <strong>Internal rotation</strong></p>
+    <p>لف داخل الحوض.</p>
+    <p>⬇</p>
+    <p>5️⃣ <strong>Extension</strong></p>
+    <p>طلع الرأس.</p>
+    <p>⬇</p>
+    <p>6️⃣ <strong>Restitution</strong></p>
+    <p>رجع الرأس لوضعه الطبيعي.</p>
+    <p>⬇</p>
+    <p>7️⃣ <strong>External rotation</strong></p>
+    <p>لف الجسم وخرج بالكامل.</p>
+    <p>💡 لا تحفظيها ككلمات. تخيلي طفلًا يلتف ليخرج من ممر ضيق.</p>
+  </div>
+
+  <!-- الفصل السادس: مراحل الولادة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">⏳</div>
+    🌸 الفصل السادس: مراحل الولادة
+  </div>
+  <div class="card">
+    <p><strong>Stage 1</strong></p>
+    <p>من أول انقباضة</p>
+    <p>⬅</p>
+    <p>حتى 10 cm</p>
+    <p>وتنقسم إلى:</p>
+    <p><strong>Latent</strong></p>
+    <p>0-4 cm</p>
+    <p>ثم</p>
+    <p><strong>Active</strong></p>
+    <p>4-10 cm</p>
+    <p style="margin-top:12px;"><strong>Stage 2</strong></p>
+    <p>من 10 cm</p>
+    <p>حتى خروج الطفل.</p>
+    <p style="margin-top:12px;"><strong>Stage 3</strong></p>
+    <p>خروج المشيمة.</p>
+    <p style="margin-top:12px;"><strong>Stage 4</strong></p>
+    <p>أول ساعتين بعد الولادة.</p>
+    <p>🚨 أخطر شيء هنا؟</p>
+    <p>PPH</p>
+    <p>ولهذا ستلاحظين أن محاضرة PPH مرتبطة بهذه المرحلة مباشرة.</p>
+  </div>
+
+  <!-- الفصل السابع: كيف أعرف أن الولادة بدأت؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🔍</div>
+    🌸 الفصل السابع: كيف أعرف أن الولادة بدأت؟
+  </div>
+  <div class="card">
+    <p>ليست كل انقباضة تعني ولادة.</p>
+    <p>لكي أقول إنها بدأت فعلًا يجب أن يوجد:</p>
+    <p>✔ Regular contractions</p>
+    <p>✔ Effacement</p>
+    <p>✔ Progressive dilatation</p>
+    <p>وقد يظهر:</p>
+    <p>🩸 Bloody show</p>
+    <p>💧 نزول ماء الجنين.</p>
+  </div>
+
+  <!-- الفصل الثامن: دور الممرضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🩺</div>
+    🌸 الفصل الثامن: دور الممرضة
+  </div>
+  <div class="card">
+    <p>هنا يبدأ الامتحان الحقيقي.</p>
+    <p>تذكري الجملة التالية:</p>
+    <p style="font-weight:800; font-size:16px; margin:12px 0;">"راقبي الأم... راقبي الطفل... راقبي تقدم الولادة."</p>
+    <p>أي سؤال Nursing تقريبًا سيدور حول هذه الثلاثة.</p>
+    <p style="margin-top:12px;"><strong>للأم</strong></p>
+    <p>العلامات الحيوية.</p>
+    <p>الألم.</p>
+    <p>السوائل.</p>
+    <p>المثانة.</p>
+    <p>التغذية.</p>
+    <p style="margin-top:12px;"><strong>للطفل</strong></p>
+    <p>نبض الجنين.</p>
+    <p>الوضعية.</p>
+    <p>الحركة.</p>
+    <p style="margin-top:12px;"><strong>للولادة</strong></p>
+    <p>قوة الانقباضات.</p>
+    <p>اتساع عنق الرحم.</p>
+    <p>نزول الرأس (Station).</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الفصل التاسع: إدارة المرحلة الأولى -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🏥</div>
+    🌸 الفصل التاسع: إدارة المرحلة الأولى (First Stage)
+  </div>
+  <div class="card">
+    <p style="font-weight:700;">الأم دخلت غرفة الولادة... ماذا أفعل أولاً؟</p>
+    <p style="margin-top:12px;">🚪 <strong>1. Admission</strong></p>
+    <p>استقبال الأم في غرفة الولادة.</p>
+    <p style="margin-top:12px;">📝 <strong>2. Assessment</strong></p>
+    <p>قبل أن تلمسي أي شيء...</p>
+    <p>اسأليها وافحصيها.</p>
+    <p>✔ History</p>
+    <p>✔ General examination</p>
+    <p>✔ Obstetric examination</p>
+    <p>✔ Vaginal examination</p>
+    <p style="margin-top:12px;">🧪 <strong>3. Investigations</strong></p>
+    <p>لا تبدأين وأنتِ لا تعرفين حالة الأم.</p>
+    <p>اعملي:</p>
+    <p>🩸 Hb</p>
+    <p>🩸 Blood group + Rh</p>
+    <p>🚽 Urine (Albumin + Sugar)</p>
+    <p>🖥 Ultrasound</p>
+    <p style="margin-top:12px;">🚽 <strong>4. Bladder care</strong></p>
+    <p>المثانة الممتلئة تعيق نزول الطفل.</p>
+    <p>لذلك:</p>
+    <p>✔ تبول كل 2-3 ساعات.</p>
+    <p>❌ إذا لم تستطع...</p>
+    <p>➡ Catheter.</p>
+    <p style="margin-top:12px;">🍹 <strong>5. التغذية</strong></p>
+    <p>❌ لا وجبة دسمة.</p>
+    <p>✔ ماء.</p>
+    <p>✔ عصير.</p>
+    <p>✔ كميات قليلة.</p>
+    <p>(لأنها قد تحتاج تخديرًا طارئًا لاحقًا).</p>
+    <p style="margin-top:12px;">💧 <strong>6. Hydration</strong></p>
+    <p>إذا احتاجت...</p>
+    <p>➡ IV Fluids.</p>
+    <p style="margin-top:12px;">🚶 <strong>7. الحركة</strong></p>
+    <p>لا تجبريها على الاستلقاء دائمًا.</p>
+    <p>✔ تمشي.</p>
+    <p>✔ الوضعية المريحة.</p>
+    <p style="margin-top:12px;">😣 <strong>8. Analgesia</strong></p>
+    <p>إذا احتاجت...</p>
+    <p>خففي الألم.</p>
+    <p style="margin-top:16px; font-weight:700;">أهم شيء بالمحاضرة</p>
+    <p>اسألي نفسك دائمًا:</p>
+    <p>ماذا أراقب؟</p>
+    <p style="margin-top:10px;">👩 <strong>الأم</strong></p>
+    <p>Vital signs</p>
+    <p>Urine output</p>
+    <p>Hydration</p>
+    <p>Pain</p>
+    <p style="margin-top:10px;">👶 <strong>الطفل</strong></p>
+    <p>FHR ❤️</p>
+    <p>Lie</p>
+    <p>Presentation</p>
+    <p>Position</p>
+    <p style="margin-top:10px;">📈 <strong>تقدم الولادة</strong></p>
+    <p>Contractions</p>
+    <p>Dilatation</p>
+    <p>Effacement</p>
+    <p>Station</p>
+    <p>هذه الأربعة من أكثر الأشياء التي يحب الدكتور السؤال عنها.</p>
+  </div>
+
+  <!-- الفصل العاشر: المرحلة الثانية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🤰🏻</div>
+    🌸 الفصل العاشر: المرحلة الثانية
+  </div>
+  <div class="card">
+    <p>الآن...</p>
+    <p>عنق الرحم وصل</p>
+    <p>10 cm</p>
+    <p>والطفل يريد الخروج.</p>
+    <p>هنا دورك يصبح أكبر.</p>
+    <p>✔ استمري في مراقبة الأم.</p>
+    <p>✔ راقبي الطفل.</p>
+    <p>✔ راقبي تقدم الولادة.</p>
+    <p style="margin-top:12px;">إذا الأغشية لم تنفجر...</p>
+    <p>قد يعمل الطبيب</p>
+    <p>Artificial rupture of membranes (ARM).</p>
+    <p style="margin-top:12px;">ثم...</p>
+    <p>قولي للأم:</p>
+    <p>"ادفعي مع كل انقباضة."</p>
+    <p>وليس طوال الوقت.</p>
+    <p style="margin-top:12px;">عندما يبدأ رأس الطفل بالظهور...</p>
+    <p>يسمى</p>
+    <p>⭐ Crowning</p>
+    <p>وهنا تسألين:</p>
+    <p>هل تحتاج Episiotomy؟</p>
+  </div>
+
+  <!-- Episiotomy -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">✂️</div>
+    🌸 Episiotomy
+  </div>
+  <div class="card">
+    <p>هذه الكلمة دائمًا تأتي في الامتحان.</p>
+    <p>هي:</p>
+    <p>✂ قطع جراحي صغير في العجان (Perineum).</p>
+    <p>لماذا؟</p>
+    <p>حتى:</p>
+    <p>✔ تكبر فتحة المهبل.</p>
+    <p>✔ تقل التمزقات الشديدة.</p>
+    <p>✔ تسهل الولادة الصعبة.</p>
+    <p>تُجرى:</p>
+    <p>✔ تحت تخدير موضعي.</p>
+    <p>✔ أثناء Crowning.</p>
+    <p>💡 ليست لكل النساء، بل عند الحاجة.</p>
+  </div>
+
+  <!-- الفصل الحادي عشر: المرحلة الثالثة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🍂</div>
+    🌸 الفصل الحادي عشر: المرحلة الثالثة
+  </div>
+  <div class="card">
+    <p>الطفل خرج.</p>
+    <p>هل انتهت الولادة؟</p>
+    <p>❌ لا.</p>
+    <p>بقيت المشيمة.</p>
+    <p>ولكي نمنع النزيف:</p>
+    <p>Active Management</p>
+    <p>احفظيها كأنها ثلاثية ذهبية:</p>
+    <p>🥇 <strong>Delay cord clamping</strong></p>
+    <p>بعد 1-2 دقيقة.</p>
+    <p style="margin-top:12px;">🥈 <strong>Oxytocin</strong></p>
+    <p>10 IU IM</p>
+    <p>لأن الرحم يجب أن ينقبض.</p>
+    <p style="margin-top:12px;">🥉 <strong>Controlled cord traction</strong></p>
+    <p>سحب الحبل السري بلطف لإخراج المشيمة.</p>
+    <p>⏰ يجب أن تخرج خلال 30 دقيقة.</p>
+  </div>
+
+  <!-- الفصل الثاني عشر: أول ساعتين بعد الولادة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🩸</div>
+    🌸 الفصل الثاني عشر: أول ساعتين بعد الولادة
+  </div>
+  <div class="card">
+    <p>هذه أخطر فترة.</p>
+    <p>لماذا؟</p>
+    <p>لأن الأم قد يحدث لها</p>
+    <p>PPH</p>
+    <p>ولهذا أول شيء أراقبه:</p>
+    <p>🩸 النزيف.</p>
+    <p>ثم:</p>
+    <p>✔ Vital signs</p>
+    <p>✔ انقباض الرحم</p>
+    <p>✔ إصلاح الـ Episiotomy إذا عُملت</p>
+    <p>✔ مسكنات</p>
+    <p>✔ رضاعة طبيعية مبكرة</p>
+    <p>✔ Anti-D إذا كانت الأم Rh-negative</p>
+  </div>
+
+  <!-- الفصل الثالث عشر: الطفل خرج... ماذا أفعل؟ -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">👶🏻</div>
+    🌸 الفصل الثالث عشر: الطفل خرج... ماذا أفعل؟
+  </div>
+  <div class="card">
+    <p>لا تضعيه جانبًا وكأن المهمة انتهت. 😑</p>
+    <p>ابدئي فورًا:</p>
+    <p>👶 تدفئته.</p>
+    <p>👶 تجفيفه.</p>
+    <p>👶 تنظيف الفم والأنف إذا احتاج.</p>
+    <p>👶 وضع سوار التعريف.</p>
+    <p>👶 تسجيل الجنس والوقت.</p>
+    <p>👶 عد التنفس والنبض.</p>
+    <p style="margin-top:16px;">ثم يأتي أشهر سؤال في المحاضرة:</p>
+    <p style="font-weight:800;">APGAR Score</p>
+    <p>بعد دقيقة</p>
+    <p>ثم بعد خمس دقائق.</p>
+    <p>يتكون من خمس أشياء:</p>
+    <p>❤️ <strong>Heart rate</strong></p>
+    <p>🫁 <strong>Respiration</strong></p>
+    <p>💪 <strong>Muscle tone</strong></p>
+    <p>🤏 <strong>Reflex response</strong></p>
+    <p>🎨 <strong>Color</strong></p>
+    <p>احفظيها كأنك تسألين:</p>
+    <p>"هل الطفل حي؟ يتنفس؟ يتحرك؟ يستجيب؟ ولونه طبيعي؟"</p>
+  </div>
+
+  <!-- الفصل الأخير: قبل خروج الأم من المستشفى -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🏡</div>
+    🌸 الفصل الأخير: قبل خروج الأم من المستشفى
+  </div>
+  <div class="card">
+    <p><strong>للأم</strong></p>
+    <p>🥗 غذاء غني بالبروتين والفيتامينات.</p>
+    <p>💧 سوائل.</p>
+    <p>🚽 التبول باستمرار.</p>
+    <p>🧼 تنظيف منطقة العجان.</p>
+    <p style="margin-top:16px;"><strong>للرضاعة</strong></p>
+    <p>⏰ أول ساعة بعد الولادة.</p>
+    <p>كل</p>
+    <p>2-3 ساعات.</p>
+    <p>ومن الثديين.</p>
+    <p style="margin-top:16px;"><strong>كيف أعرف أن الرضاعة كافية؟</strong></p>
+    <p>✔ 6 حفاضات مبللة يوميًا.</p>
+    <p>✔ يطلب الرضاعة 8-12 مرة يوميًا.</p>
+    <p>✔ ينام بعد الرضاعة.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الخريطة الذهنية -->
+  <div class="card" style="border-color:#f472b6; background:linear-gradient(135deg,#fff0f5,#fce7f3);">
+    <strong>👑 الخريطة الذهنية التي ستثبت الدرس</strong>
+    <p style="margin-top:12px;">احفظي الدرس كله بهذه الجملة:</p>
+    <p>الطفل جاهز → الهرمونات تبدأ الولادة → 3P → حركات الطفل (Cardinal movements) → مراحل الولادة → دور الممرضة في كل مرحلة → خروج المشيمة → مراقبة الأم لمنع PPH → رعاية المولود → تعليم الأم.</p>
+    <p style="margin-top:16px;">لاحظي شيئًا مهمًا جدًا: هذه المحاضرة هي الأم لكل محاضرات الـOBS التي بعدها. كل محاضرة قادمة تقريبًا ستقول: "ماذا لو فشل جزء من هذه القصة؟" ولهذا إذا فهمتِ Normal Labour، ستجدين أن Obstructed Labour، Placenta Previa، PPH، Eclampsia وغيرها أصبحت أسهل بكثير لأنها مجرد خروج عن السيناريو الطبيعي. يا Queen، هذه ليست عشرات المعلومات المنفصلة، بل قصة واحدة متسلسلة. 👑📚</p>
+  </div>
+
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">🌸 نهاية قصة المخاض الطبيعي كاملة — أُعدت للدفعة الأولى بكالوريوس التمريض 🌸</p>
+
+</div>
+</body>
+</html>

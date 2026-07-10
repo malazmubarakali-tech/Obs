@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محاضرة أمراض القلب أثناء الحمل | Heart Disease in Pregnancy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #f0fdfa;
+    --card: #ffffff;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --teal-mid: #14b8a6;
+    --emerald: #059669;
+    --emerald-light: #d1fae5;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --shadow: 0 8px 30px rgba(13,148,136,0.07);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fef3c7 25%, #f0fdfa 60%, #d1fae5 100%);
+    color:var(--text);
+    line-height:1.7;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(219,39,119,0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(13,148,136,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fef3c7, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:820px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(220,38,38,0.1);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .nursing-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .nursing-card {
+    border-radius:20px; padding:18px; border:1.5px solid;
+    transition: all 0.3s;
+  }
+  .nursing-card:hover { transform: scale(1.02); }
+  .nc-header { font-size:14px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .nursing-card ul { list-style:none; }
+  .nursing-card ul li { font-size:13px; color:var(--muted); padding:5px 0; border-bottom:1px dashed #e2e8f0; display:flex; align-items:flex-start; gap:6px; }
+  .nursing-card ul li:last-child { border-bottom:none; }
+  .nursing-card ul li::before { content:'🩺'; font-size:12px; flex-shrink:0; margin-top:2px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col, .nursing-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">❤️🤰🏻🫀</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>أمراض القلب أثناء الحمل</h1>
+  <p>Heart Disease in Pregnancy · بكالوريوس التمريض - الدفعة الأولى 🌸</p>
+</div>
+
+<div class="container">
+
+  <!-- الخطوط العريضة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">📋</div>
+    الخطوط العريضة <span style="font-weight:400; font-size:15px; margin-right:8px;">Outlines</span>
+  </div>
+  <div class="card">
+    <ul style="list-style:none; padding-right:8px; font-size:14px;">
+      <li>· Introduction - مقدمة</li>
+      <li>· Etiology - الأسباب</li>
+      <li>· Diagnosis - التشخيص</li>
+      <li>· Hemodynamic changes during pregnancy - التغيرات الديناميكية الدموية أثناء الحمل</li>
+      <li>· Effect of HD on pregnant women - تأثير أمراض القلب على الحوامل</li>
+      <li>· Medical management - التدبير الطبي</li>
+      <li>· Nursing management - التدبير التمريضي</li>
+    </ul>
+  </div>
+
+  <!-- مقدمة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ef4444,#b91c1c);">❤️</div>
+    مقدمة عن القلب <span style="font-weight:400; font-size:15px; margin-right:8px;">Introduction</span>
+  </div>
+  <div class="card">
+    <p>The incidence of heart disease with pregnancy worldwide is between 0.2 and 3.7%. Rheumatic heart disease accounts for about half of the cases, while congenital heart defects are responsible for most of the remaining. The mortality rate in pregnant cardiac patients is 10% worldwide.</p>
+    <p style="color:var(--muted); margin-top:8px;">معدل حدوث أمراض القلب مع الحمل عالمياً بين 0.2 و 3.7%. يمثل مرض القلب الروماتيزمي حوالي نصف الحالات، بينما عيوب القلب الخلقية مسؤولة عن معظم الحالات المتبقية. معدل الوفيات في المريضات الحوامل المصابات بأمراض القلب هو 10% عالمياً.</p>
+  </div>
+
+  <!-- الأسباب -->
+  <div class="card">
+    <strong>🧬 الأسباب (Etiology)</strong>
+    <p style="margin-top:8px;">The main cardiac diseases occurring with pregnancy are: Rheumatic heart disease, Congenital heart disease. Coronary heart disease & Cardiomyopathies are rare during pregnancy.</p>
+    <p style="color:var(--muted);">أمراض القلب الرئيسية التي تحدث مع الحمل هي: مرض القلب الروماتيزمي، مرض القلب الخلقي. أمراض القلب التاجية واعتلالات عضلة القلب نادرة أثناء الحمل.</p>
+  </div>
+
+  <!-- التشخيص -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🔬</div>
+    التشخيص <span style="font-weight:400; font-size:15px; margin-right:8px;">Diagnosis</span>
+  </div>
+  <div class="card">
+    <p><strong>History:</strong> Rheumatic fever or Congenital heart disease.</p>
+    <p style="color:var(--muted);"><strong>السيرة:</strong> حمى روماتيزمية أو مرض قلب خلقي.</p>
+    <p style="margin-top:8px;"><strong>Signs & symptoms:</strong> Hyperventilation, Dyspnea, Orthopnea, Cough, Functional systolic murmurs, Lower limb edema. Signs of heart failure.</p>
+    <p style="color:var(--muted);"><strong>العلامات والأعراض:</strong> فرط تهوية، ضيق تنفس، ضيق تنفس عند الاستلقاء، سعال، نفخات انقباضية وظيفية، وذمة الأطراف السفلية. علامات فشل القلب.</p>
+    <p style="margin-top:8px;"><strong>Investigations:</strong> HB%, Urine examination, ECG, Echocardiography, Chest X-ray.</p>
+    <p style="color:var(--muted);"><strong>الفحوصات:</strong> نسبة الهيموغلوبين، فحص البول، تخطيط القلب، تخطيط صدى القلب، أشعة الصدر.</p>
+  </div>
+
+  <!-- تصنيف NYHA -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">📊</div>
+    تصنيف جمعية القلب بنيويورك (NYHA)
+  </div>
+  <div class="card">
+    <p>Prognosis depends on functional status: NYHA classes I and II usually do well with mortality <1%. Classes III and IV may have mortality 5-15% and should be advised against pregnancy.</p>
+    <p style="color:var(--muted);">يعتمد الإنذار على الحالة الوظيفية: الفئتان الأولى والثانية عادة ما تكون نتائجهما جيدة مع وفيات <1%. الفئتان الثالثة والرابعة قد تصل نسبة الوفيات فيهما إلى 5-15% ويجب نصحهن بعدم الحمل.</p>
+  </div>
+
+  <!-- التغيرات الديناميكية الدموية -->
+  <div class="card">
+    <strong>🔄 التغيرات الديناميكية الدموية أثناء الحمل (Hemodynamic Changes)</strong>
+    <ul style="list-style:none; padding-right:12px; margin-top:8px; font-size:13px;">
+      <li>· Cardiac output increases 30-40% (HR by 10-15 b/m) - يزيد النتاج القلبي 30-40%</li>
+      <li>· Blood volume increases up to 50% - يزيد حجم الدم حتى 50%</li>
+      <li>· Peripheral resistance decreases - تنخفض المقاومة المحيطية</li>
+      <li>· Blood pressure decreases in half of pregnancy - ينخفض ضغط الدم في النصف الأول</li>
+      <li>· HB & hematocrit decrease - ينخفض الهيموغلوبين والهيماتوكريت</li>
+    </ul>
+  </div>
+
+  <!-- تأثير أمراض القلب -->
+  <div class="card">
+    <strong>💔 تأثير أمراض القلب على الحوامل (Effect of HD)</strong>
+    <p style="margin-top:8px;"><strong>Mother:</strong> Abortion, incidence of maternal mortality, Preterm labor.</p>
+    <p style="color:var(--muted);"><strong>الأم:</strong> إجهاض، زيادة وفيات الأمهات، مخاض مبتسر.</p>
+    <p style="margin-top:8px;"><strong>Fetus:</strong> Fetal death (due to hypoxia), Fetus small for gestational age.</p>
+    <p style="color:var(--muted);"><strong>الجنين:</strong> وفاة جنينية (بسبب نقص الأكسجة)، جنين صغير بالنسبة لعمر الحمل.</p>
+  </div>
+
+  <!-- السمات السريرية المحاكية -->
+  <div class="card">
+    <strong>🩺 سمات سريرية طبيعية تحاكي مرض القلب:</strong>
+    <p style="margin-top:8px;">1. Dyspnea - ضيق التنفس</p>
+    <p>2. Pedal Edema - وذمة القدمين</p>
+    <p>3. Cardiac impulse diffused - نبضة قلب منتشرة</p>
+    <p>4. Jugular veins distended - انتفاخ الأوردة الوداجية</p>
+    <p>5. Systolic ejection murmurs (96% of pregnant women) - نفخات انقباضية قذفية</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- التدبير الطبي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">💊</div>
+    التدبير الطبي <span style="font-weight:400; font-size:15px; margin-right:8px;">Medical Management</span>
+  </div>
+  <div class="card">
+    <p><strong>Aim:</strong> Prevention of Heart Failure, Prevention of infective endocarditis.</p>
+    <p style="color:var(--muted);"><strong>الهدف:</strong> منع فشل القلب، منع التهاب الشغاف العدوائي.</p>
+    <p style="margin-top:8px;"><strong>Medications:</strong> Diuretics (Frusemide), Digoxin, Hematinics, Infection prophylaxis, Beta-blockers (Propanolol), Aminophylline, Heparin.</p>
+    <p style="color:var(--muted);"><strong>الأدوية:</strong> مدرات البول، ديجوكسين، مقويات الدم، الوقاية من العدوى، حاصرات بيتا، أمينوفيلين، هيبارين.</p>
+    <p style="margin-top:8px;"><strong>Surgical Treatment:</strong> Therapeutic abortion in class III/IV early in pregnancy. Cardiac surgery for recurrent pulmonary edema not responding to medical treatment. Closed cardiac surgery has no increased risk; open surgery has higher fetal loss.</p>
+    <p style="color:var(--muted);"><strong>العلاج الجراحي:</strong> الإجهاض العلاجي للفئة III/IV مبكراً. جراحة القلب للوذمة الرئوية المتكررة غير المستجيبة. الجراحة المغلقة لا تزيد الخطر؛ الجراحة المفتوحة تزيد فقدان الجنين.</p>
+  </div>
+
+  <!-- رعاية ما قبل الولادة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#ec4899,#db2777);">🤰🏻</div>
+    رعاية ما قبل الولادة <span style="font-weight:400; font-size:15px; margin-right:8px;">Antepartum Care</span>
+  </div>
+  <div class="card">
+    <ul style="list-style:none; padding-right:12px; font-size:13px;">
+      <li>· More frequent antenatal visits - زيارات متكررة لطبيب التوليد والقلب</li>
+      <li>· Rest in bed: 10h night + 30min after meals - راحة بالسرير: 10 ساعات ليلاً ونصف ساعة بعد الوجبات</li>
+      <li>· Diet: Moderate salt restriction (2-4 gm/day) - غذاء: تقييد معتدل للملح</li>
+      <li>· Prevention of dental & pulmonary infections - منع العدوى السنية والرئوية</li>
+      <li>· Treatment of anemia - علاج فقر الدم</li>
+      <li>· Placental insufficiency tests - اختبارات قصور المشيمة</li>
+      <li>· Hospitalization: at 32 & 38 weeks, Grade 3 & 4 more time in hospital - الإدخال للمستشفى: في الأسبوع 32 و38، الفئة 3 و4 وقت أطول</li>
+    </ul>
+  </div>
+
+  <!-- حالات خاصة -->
+  <div class="card">
+    <strong>🌟 حالات خاصة (Special Cases)</strong>
+    <ul style="list-style:none; padding-right:12px; margin-top:8px; font-size:13px;">
+      <li>· Patients with prosthetic valves: Heparin to prevent clots, Avoid oral anticoagulants (teratogenic) - مريضات الصمامات الاصطناعية: هيبارين لمنع التخثر، تجنب مضادات التخثر الفموية</li>
+      <li>· Therapeutic abortion in 1st trimester for class IV - إجهاض علاجي للفئة الرابعة</li>
+      <li>· Heart failure in previous pregnancy, Severe mitral stenosis - فشل قلب في حمل سابق، تضيق تاجي شديد</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- التدبير التمريضي -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">🩺</div>
+    التدبير التمريضي <span style="font-weight:400; font-size:15px; margin-right:8px;">Nursing Management</span>
+  </div>
+
+  <div class="card">
+    <strong>[1] Nursing Assessment:</strong>
+    <p style="margin-top:8px;">History of dyspnea, palpitation, fatigue, factors increasing strain (anemia, infection, anxiety), family history, determine functional capacity by pulse, respiration, BP.</p>
+    <p style="color:var(--muted);">التقييم التمريضي: تاريخ ضيق تنفس، خفقان، إرهاق، عوامل تزيد الجهد، تاريخ عائلي، تحديد القدرة الوظيفية بالنبض والتنفس وضغط الدم.</p>
+  </div>
+
+  <div class="card">
+    <strong>🏥 رعاية ما قبل الولادة (Nursing Care During Antenatal Period):</strong>
+    <ul style="list-style:none; padding-right:12px; margin-top:8px; font-size:13px;">
+      <li>(1) Assess cardiac status - تقييم حالة القلب</li>
+      <li>(2) Assess symptoms of cardiac decompensation - تقييم أعراض عدم تعويض القلب</li>
+      <li>(3) Teach signs of deteriorating status (dyspnea, orthopnea, cough, hemoptysis) - تعليم علامات التدهور</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <strong>🛡️ الحماية من العدوى (Protection from infection):</strong>
+    <p>Inform about importance of protection, especially upper respiratory infection. Teach to report signs of infection.</p>
+    <p style="color:var(--muted);">إعلام المريضة بأهمية الحماية، خاصة عدوى الجهاز التنفسي العلوي. تعليم الإبلاغ عن علامات العدوى.</p>
+  </div>
+
+  <div class="card">
+    <strong>🍽️ تعزيز التغذية الكافية (Promotion of adequate nutrition):</strong>
+    <p>Diet rich in Iron, Protein, essential nutrition, Low in sodium.</p>
+    <p style="color:var(--muted);">غذاء غني بالحديد والبروتين والعناصر الأساسية، قليل الصوديوم.</p>
+  </div>
+
+  <div class="card">
+    <strong>😴 تعزيز الراحة (Promotion of rest):</strong>
+    <p>8-10 hours sleep, daily rest periods. Rest on left side to decrease IVC pressure, lateral recumbent facilitates fetal blood flow.</p>
+    <p style="color:var(--muted);">8-10 ساعات نوم، فترات راحة يومية. الراحة على الجانب الأيسر لتقليل ضغط الوريد الأجوف السفلي، الوضع الجانبي يسهل تدفق الدم للجنين.</p>
+  </div>
+
+  <div class="card">
+    <strong>📚 فهم المريضة لحالتها (The woman should understand her condition):</strong>
+    <p>Signs of decompensation, any medication and how to use it, reason to decrease activity if symptoms occur.</p>
+    <p style="color:var(--muted);">علامات عدم التعويض، أي دواء وكيفية استخدامه، سبب تقليل النشاط عند ظهور الأعراض.</p>
+  </div>
+
+  <div class="card">
+    <strong>⚙️ تنفيذ العلاج الداعم (Implementation of supportive therapy):</strong>
+    <p>Prophylactic antibiotic, Oxygen by mask if dyspnea, Diuretics to reduce pulmonary congestion, Sedatives to alleviate anxiety.</p>
+    <p style="color:var(--muted);">مضاد حيوي وقائي، أكسجين بالقناع، مدرات بول لتقليل الاحتقان الرئوي، مهدئات لتخفيف القلق.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الإنهاء الطبي للحمل -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#b91c1c,#7f1d1d);">🚫</div>
+    الإنهاء الطبي للحمل <span style="font-weight:400; font-size:15px; margin-right:8px;">MTP</span>
+  </div>
+  <div class="card">
+    <p>Safest in first trimester. Indicated in: Congestive heart failure & pulmonary edema in 1st trimester, Active rheumatic fever or infective endocarditis, Severe mitral stenosis with complications, Coarctation of aorta, Patient decides after counseling.</p>
+    <p style="color:var(--muted);">الأكثر أماناً في الثلث الأول. الدواعي: فشل قلب احتقاني ووذمة رئوية، حمى روماتيزمية نشطة، تضيق تاجي شديد، تضيق الأبهر، قرار المريضة بعد الاستشارة.</p>
+  </div>
+
+  <!-- الرعاية أثناء الولادة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f97316,#ea580c);">🏥</div>
+    الرعاية أثناء الولادة <span style="font-weight:400; font-size:15px; margin-right:8px;">Intranatal Care</span>
+  </div>
+  <div class="card">
+    <p><strong>1st stage:</strong> Bed rest, oxygen & resuscitation available, Analgesia (sedative+narcotic), Slow IV infusion, Monitor FHR, Partogram, Antibiotic prophylaxis.</p>
+    <p style="color:var(--muted);"><strong>المرحلة الأولى:</strong> راحة بالسرير، أكسجين وإجراءات إنعاش، تسكين، تسريب وريدي بطيء، مراقبة قلب الجنين، بارتوغرام، مضاد حيوي وقائي.</p>
+    <p style="margin-top:8px;"><strong>2nd stage:</strong> Shorten by outlet forceps, Frusemide 40mg IV after birth.</p>
+    <p style="color:var(--muted);"><strong>المرحلة الثانية:</strong> تقصيرها بالملقط، فوروسيميد 40 ملغ وريدياً بعد الولادة.</p>
+    <p style="margin-top:8px;"><strong>3rd stage:</strong> Ergometrine IV/IM is contraindicated.</p>
+    <p style="color:var(--muted);"><strong>المرحلة الثالثة:</strong> الإرغومترين وريدياً/عضلياً ممنوع.</p>
+  </div>
+
+  <!-- النفاس -->
+  <div class="card">
+    <strong>🌸 النفاس (Puerperium):</strong>
+    <p>Observed closely 24h, Complete bed rest, Monitor respiratory/cardiovascular/urinary, Stay in hospital ≥14 days, Ambulation to avoid DVT, Monitor temperature & antibiotics.</p>
+    <p style="color:var(--muted);">مراقبة دقيقة 24 ساعة، راحة تامة، مراقبة تنفسية/قلبية/بولية، البقاء ≥14 يوم، تجوال لمنع خثار الأوردة العميقة، مراقبة الحرارة والمضادات الحيوية.</p>
+  </div>
+
+  <!-- منع الحمل -->
+  <div class="card">
+    <strong>💊 منع الحمل (Contraception):</strong>
+    <p>Tubal ligation or vasectomy for those who completed family; barrier contraception (condom) is safest. IUCD and oral contraceptives carry risk.</p>
+    <p style="color:var(--muted);">ربط البوق أو قطع القناة المنوية لمن أكملوا العائلة؛ الواقي الذكري هو الأكثر أماناً. اللولب وموانع الحمل الفموية تحمل خطراً.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- العملية التمريضية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">📋</div>
+    العملية التمريضية <span style="font-weight:400; font-size:15px; margin-right:8px;">Nursing Process</span>
+  </div>
+
+  <div class="card">
+    <strong>1-ASSESSMENT:</strong>
+    <p>Cough (with/without hemoptysis), Dyspnea (progressive, on exertion), Edema (progressive, generalized), Palpitation, Weight gain, Diastolic murmurs, Crackles in lung bases.</p>
+    <p style="color:var(--muted);">التقييم: سعال (مع/بدون نفث دموي)، ضيق تنفس (متفاقم مع الجهد)، وذمة (متفاقمة، معممة)، خفقان، زيادة وزن، نفخات انبساطية، فرقعات في قواعد الرئتين.</p>
+  </div>
+
+  <!-- التشخيصات التمريضية -->
+  <div class="nursing-grid">
+    <div class="nursing-card" style="background:#fff5f5; border-color:#fca5a5;">
+      <div class="nc-header" style="color:#dc2626;">1. High risk for infection</div>
+      <ul>
+        <li>Plan: Avoid infection - تجنب العدوى</li>
+        <li>Personal hygiene - نظافة شخصية</li>
+        <li>Reduce overcrowding - تقليل الازدحام</li>
+      </ul>
+    </div>
+    <div class="nursing-card" style="background:#f8faff; border-color:#93c5fd;">
+      <div class="nc-header" style="color:#2563eb;">2. Impaired gas exchange</div>
+      <ul>
+        <li>Plan: Maintain normal gas exchange - الحفاظ على تبادل غازات طبيعي</li>
+        <li>Bed rest (semi-setting) - راحة سرير (شبه جلوس)</li>
+        <li>Oxygen beside patient - أكسجين بجانب المريضة</li>
+      </ul>
+    </div>
+    <div class="nursing-card" style="background:#fffdf5; border-color:#fcd34d;">
+      <div class="nc-header" style="color:#d97706;">3. Knowledge deficit</div>
+      <ul>
+        <li>Plan: Increase awareness - زيادة الوعي</li>
+        <li>Teaching about disease, treatment activities - تعليم عن المرض والعلاج</li>
+      </ul>
+    </div>
+    <div class="nursing-card" style="background:#fafaff; border-color:#c4b5fd;">
+      <div class="nc-header" style="color:#7c3aed;">4. Fear</div>
+      <ul>
+        <li>Plan: Reduce fear - تقليل الخوف</li>
+        <li>Psychological support - دعم نفسي</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">🌸 د. أوما و د. إن كيه جوبتا · نهاية محاضرة أمراض القلب أثناء الحمل 🌸</p>
+
+</div>
+</body>
+</html>

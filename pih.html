@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصة اضطرابات ضغط الدم أثناء الحمل | PIH Story</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+  :root {
+    --bg: #fdf2f8;
+    --card: #ffffff;
+    --pink: #db2777;
+    --pink-light: #fce7f3;
+    --pink-mid: #ec4899;
+    --rose: #f472b6;
+    --rose-light: #fdf2f8;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --blue: #2563eb;
+    --blue-light: #dbeafe;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --teal: #0d9488;
+    --teal-light: #ccfbf1;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #fbcfe8;
+    --shadow: 0 8px 30px rgba(236,72,153,0.1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Tajawal',sans-serif;
+    background: linear-gradient(160deg, #fdf2f8 0%, #fff0f5 25%, #fce7f3 60%, #fdf2f8 100%);
+    color:var(--text);
+    line-height:1.9;
+    font-size:15px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  body::before {
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background-image: radial-gradient(circle at 25% 50%, rgba(236,72,153,0.06) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 30%, rgba(244,114,182,0.05) 0%, transparent 50%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 30%, #ef4444 60%, #fca5a5 100%);
+    padding: 50px 24px 42px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #fecaca;
+    z-index:2;
+    box-shadow:0 12px 40px rgba(220,38,38,0.25);
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    bottom:0;left:0;width:100%;height:4px;
+    background: linear-gradient(90deg, #fca5a5, #fff0f5, #fca5a5);
+    animation: slideShine 4s linear infinite;
+  }
+  @keyframes slideShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .hero .bubbles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+  .bubble { position:absolute; border-radius:50%; opacity:0.12; background:white; }
+  .b1 { width:130px; height:130px; top:-40px; right:-20px; animation: floatA 6s ease-in-out infinite; }
+  .b2 { width:80px; height:80px; bottom:-20px; left:40px; animation: floatB 7s ease-in-out infinite; }
+  .b3 { width:60px; height:60px; top:30px; left:20%; animation: floatA 5s ease-in-out infinite; }
+  .b4 { width:50px; height:50px; bottom:10px; right:25%; animation: floatB 8s ease-in-out infinite; }
+  @keyframes floatA { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-18px); } }
+  @keyframes floatB { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+
+  .hero-emoji { font-size:64px; margin-bottom:10px; display:block; animation: pulse 2.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+  .hero-tag { display:inline-block; background:rgba(255,255,255,0.2); backdrop-filter:blur(10px); color:white; padding:6px 20px; border-radius:25px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:14px; border:1px solid rgba(255,255,255,0.3); }
+  .hero h1 { font-size:36px; font-weight:900; color:white; margin-bottom:6px; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .hero p { color:rgba(255,255,255,0.95); font-size:15px; }
+
+  .container { max-width:850px; margin:0 auto; padding:28px 18px 60px; position:relative; z-index:2; }
+
+  .sec-title {
+    display:flex; align-items:center; gap:12px;
+    margin:34px 0 16px;
+    font-size:18px; font-weight:800; color:var(--text);
+  }
+  .sec-title .icon {
+    width:42px; height:42px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; flex-shrink:0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .card {
+    background:var(--card);
+    border: 1.5px solid var(--border);
+    border-radius:24px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+    position:relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(236,72,153,0.15);
+  }
+
+  .grid-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+
+  .divider { height:3px; background:linear-gradient(to left, transparent, #ef4444, #f59e0b, transparent); margin:28px 0; border-radius:2px; }
+
+  @media(max-width:500px){
+    .grid-2col { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="bubbles">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+  </div>
+  <span class="hero-emoji">🩸🤰🏻💓</span>
+  <div class="hero-tag">جامعة العلوم الصحية - فرع الولاية الشمالية</div>
+  <h1>قصة اضطرابات ضغط الدم أثناء الحمل</h1>
+  <p>PIH · بكالوريوس التمريض - الدفعة الأولى 💓</p>
+</div>
+
+<div class="container">
+
+  <!-- الجزء الأول: بداية الكارثة -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f472b6,#ec4899);">🌸</div>
+    🌸 الجزء الأول: بداية الكارثة... كيف يتحول الحمل الطبيعي إلى PIH؟
+  </div>
+  <div class="card">
+    <p>تخيلي أن الرحم عبارة عن بيت جديد 👶🏡.</p>
+    <p>والطفل مستأجر صغير.</p>
+    <p>والمشيمة هي شركة الكهرباء والمياه والإنترنت.</p>
+    <p style="margin-top:12px;">في الحمل الطبيعي...</p>
+    <p>المشيمة تأتي منذ البداية وتبني شوارع ضخمة داخل الرحم.</p>
+    <p>فتصبح الشرايين واسعة.</p>
+    <p>والدم يدخل بسهولة.</p>
+    <p>الأكسجين يصل.</p>
+    <p>الغذاء يصل.</p>
+    <p>الأم بخير.</p>
+    <p>والجنين يأكل وينمو ويستمتع بحياته وكأنه أمير صغير.😂</p>
+    <p style="margin-top:12px;">لكن...</p>
+    <p>في بعض النساء...</p>
+    <p>المشيمة تبني الطرق بطريقة سيئة جدًا.</p>
+    <p>الشرايين تصبح ضيقة.</p>
+    <p>فيقل الدم الذي يصل للمشيمة.</p>
+    <p style="margin-top:12px;">فتصرخ المشيمة:</p>
+    <p>"أنقذونيييييي!!"</p>
+    <p>وتبدأ بإفراز مواد في دم الأم.</p>
+    <p>هذه المواد تجعل كل الأوعية الدموية في جسم الأم تنقبض.</p>
+    <p style="margin-top:12px;">وهنا تبدأ المصيبة...</p>
+    <p>⬆️ الضغط يرتفع.</p>
+    <p>⬇️ الدم الذي يصل للكلى يقل.</p>
+    <p>⬇️ الدم الذي يصل للمخ يقل.</p>
+    <p>⬇️ الدم الذي يصل للكبد يقل.</p>
+    <p>⬇️ وحتى الطفل نفسه يقل الدم الذي يصله.</p>
+    <p style="margin-top:12px;">وهكذا يبدأ PIH.</p>
+  </div>
+
+  <!-- ما هو PIH -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#db2777,#be185d);">📖</div>
+    أولاً... ما هو PIH؟
+  </div>
+  <div class="card">
+    <p><strong>Pregnancy Induced Hypertension</strong></p>
+    <p>يعني: ارتفاع ضغط الدم أثناء الحمل.</p>
+    <p>المحاضرة كتبت: Diastolic >90</p>
+    <p>لكن عمليًا احفظي: <strong>BP ≥140/90 بعد الأسبوع 20.</strong></p>
+    <p style="margin-top:12px;">لماذا بعد الأسبوع 20؟</p>
+    <p>هذا سؤال يأتي كثيرًا.</p>
+    <p>لأن مشكلة المشيمة تبدأ بالظهور بعد أن تكبر وتصبح مسؤولة عن تغذية الجنين.</p>
+    <p>لذلك أي ضغط قبل الأسبوع 20 غالبًا ليس بسبب الحمل.</p>
+  </div>
+
+  <!-- أنواع الضغط في الحمل -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🎮</div>
+    أنواع الضغط في الحمل
+  </div>
+  <div class="card">
+    <p>هنا أغلب الطلاب يضيعون.</p>
+    <p>لكن أنا أحب أحولها إلى لعبة مستويات.</p>
+    <p>تخيلي لعبة فيديو 🎮.</p>
+    <p>كلما زادت الخطورة... صعدنا Level جديد.</p>
+    <p style="margin-top:12px;">🟢 <strong>Level 1:</strong> Chronic Hypertension</p>
+    <p>⬇️</p>
+    <p>🟡 <strong>Level 2:</strong> Gestational Hypertension</p>
+    <p>⬇️</p>
+    <p>🟠 <strong>Level 3:</strong> Mild Preeclampsia</p>
+    <p>⬇️</p>
+    <p>🔴 <strong>Level 4:</strong> Severe Preeclampsia</p>
+    <p>⬇️</p>
+    <p>💀 <strong>Final Boss:</strong> Eclampsia</p>
+  
+  </div>
+  <div class="card">
+    <p>لو قلنا إن الحمل فيلم... فالـ Preeclampsia هي الشريرة الرئيسية 😑.</p>
+    <p>لكن عندها إخوات وأقارب، وكل واحد أخطر من الثاني.</p>
+  </div>
+
+  <div class="card">
+    <strong>أولاً: Chronic Hypertension</strong>
+    <p>هذه المرأة كانت عندها ضغط قبل الحمل أصلاً. يعني الحمل بريء. كيف أعرفها؟ ضغط قبل الحمل، أو قبل الأسبوع 20، ويستمر حتى بعد الولادة أكثر من 6 أسابيع. يعني المشكلة قديمة.</p>
+  </div>
+
+  <div class="card">
+    <strong>ثانياً: Gestational Hypertension</strong>
+    <p>الحمل هو الذي سبب الضغط. لكن لا يوجد بروتين في البول ولا يوجد ضرر للأعضاء. فقط ضغط. يبدأ بعد الأسبوع 20.</p>
+    <p style="font-weight:700;">حمل ➜ ضغط فقط.</p>
+  </div>
+
+  <div class="card">
+    <strong>ثالثاً: Preeclampsia (بطلة المحاضرة)</strong>
+    <p>هنا تبدأ الدراما الحقيقية. المشيمة أصبحت تطلق مواد تجعل كل الأوعية الدموية تضيق. تخيلي مدينة كاملة... كل الشوارع ضاقت. 🚗 الدم لا يستطيع المرور بسهولة. فتبدأ المشاكل في كل الأعضاء.</p>
+    <p style="margin-top:12px;">ماذا نرى؟ ✔ ضغط مرتفع | ✔ Proteinuria | ✔ أحياناً Edema.</p>
+    <p style="margin-top:12px;">لماذا يظهر البروتين في البول؟ الكلى عبارة عن فلتر. عندما يحدث Vasospasm... يقل الدم الواصل للكلى. فتتلف الفلاتر. فتبدأ البروتينات التي كان يجب أن تبقى في الدم... تهرب للبول.</p>
+    <p style="margin-top:12px;">لماذا تصاب بصداع؟ لأن أوعية الدماغ أيضاً انقبضت. الدم لا يصل جيداً. والضغط داخل الدماغ يرتفع. فيبدأ: 🤕 صداع شديد.</p>
+    <p style="margin-top:12px;">لماذا تصبح الرؤية مشوشة؟ لأن شبكية العين أيضاً تأثرت. فتقول المريضة: "أشوف ضباب." "أشوف نقاط." "الرؤية مشوشة." وهذا من أخطر الإنذارات.</p>
+    <p style="margin-top:12px;">لماذا ألم أعلى البطن؟ هذا سؤال يحبه الدكاترة. السبب ليس المعدة. بل الكبد. الكبد ينتفخ ويشد الغشاء المحيط به. فيننتج ألم شديد تحت الأضلاع اليمنى أو في Epigastric region. إذا قالت الحامل: "أحس بألم قوي فوق المعدة." 🚨 لا تفكري مباشرة أنه Gastritis. قد تكون Severe Preeclampsia.</p>
+  </div>
+
+  <!-- متى تصبح Severe -->
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <strong>🔴 متى تصبح Severe؟</strong>
+    <p>إذا أضيف إلى الـ Preeclampsia أي من التالي:</p>
+    <p>🔥 BP >160/110 | 🔥 صداع شديد | 🔥 زغللة | 🔥 ألم Epigastric | 🔥 Platelets منخفضة | 🔥 Liver enzymes مرتفعة | 🔥 Oliguria | 🔥 Pulmonary edema.</p>
+    <p style="margin-top:12px;">هنا نقول: هذه ليست حالة عادية. هذه قد تتحول إلى Eclampsia في أي لحظة.</p>
+  </div>
+
+  <!-- Oliguria & Pulmonary edema -->
+  <div class="card">
+    <p><strong>Oliguria:</strong> يعني البول أقل من 400-500 ml/day. لماذا؟ لأن الكلية لم يعد يصلها دم كافٍ.</p>
+    <p style="margin-top:12px;"><strong>Pulmonary edema:</strong> من أخطر المضاعفات. بسبب تلف الأوعية... يبدأ السائل يخرج من الدم إلى الرئة. فتغرق الحويصلات الهوائية بالماء. فتبدأ المريضة تختنق.</p>
+  </div>
+
+  <!-- كيف نشخص -->
+  <div class="card">
+    <strong>🔬 كيف نشخص الحالة؟</strong>
+    <p>أول شيء: ضغط أكثر من 140/90.</p>
+    <p>ثاني شيء: Urine protein.</p>
+    <p>ثالث شيء: زيادة وزن مفاجئة. الطبيعي حوالي 0.45 kg/week. لكن إذا أصبحت 2 kg خلال أسبوع... 🚨 فهذا غالباً احتباس سوائل.</p>
+    <p style="margin-top:12px;">ثم نطلب التحاليل: CBC (لنرى الصفائح) | LFT (لنرى الكبد) | RFT (لنرى الكلى) | Urine Protein.</p>
+  </div>
+
+  <div class="card">
+    <strong>⚠️ من أكثر النساء عرضة؟</strong>
+    <p>👶 أول حمل | 👵 عمر أقل من 20 أو أكثر من 35 | 👶 توائم | 🍬 سكري | 🩺 ضغط مزمن | 🫘 أمراض كلى | 💦 Polyhydramnios | 🫧 Hydatidiform mole.</p>
+    <p style="margin-top:12px;">لاحظي شيئاً جميلاً... كل الحالات التي تجعل المشيمة كبيرة أو غير طبيعية... ترفع احتمال الـ Preeclampsia. لأن أصل المشكلة يبدأ من المشيمة نفسها.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الفصل الثالث: كيف ننقذ الأم والجنين -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#10b981,#059669);">🎬</div>
+    🎬 الفصل الثالث: كيف ننقذ الأم والجنين؟
+  </div>
+  <div class="card">
+    <p>تخيلي أن الحامل وصلت للمستشفى. ضغطها مرتفع. تشوف ضباب. تشتكي من صداع. والدكتور قال: Severe Preeclampsia.</p>
+    <p style="margin-top:12px;">السؤال... هل أول شيء نولدها؟ ليس دائماً. أولاً ننقذها. لأن لو ماتت الأم... لن يستفيد الجنين شيئاً.</p>
+  </div>
+
+  <div class="card">
+    <strong>🎯 أهداف العلاج:</strong>
+    <p>❤️ نحافظ على حياة الأم.</p>
+    <p>👶 نحافظ على حياة الجنين حتى يصبح ناضجاً إذا أمكن.</p>
+    <p style="margin-top:12px;">يعني دائماً نوازن بين الاثنين.</p>
+  </div>
+
+  <div class="card">
+    <strong>أولاً: الراحة (Rest) -</strong> لأن أي مجهود يزيد الضغط ويقلل وصول الدم للمشيمة.
+    <strong>ثانياً: الغذاء -</strong> غني بالبروتين والفيتامينات والألياف، وقليل الملح (ليس لأن الملح هو السبب، لكن لتقليل احتباس السوائل).
+    <strong>ثالثاً: مراقبة الوزن -</strong> إذا زادت فجأة 2 كجم في أسبوع فهذا إنذار.
+    <strong>رابعاً: قياس الضغط -</strong> مرتين يومياً للحالات العادية، كل 4 ساعات للـ Severe، وقد يصل كل 15-20 دقيقة أثناء الولادة.
+    <strong>خامساً: تحليل البول -</strong> كل يوم تقريباً لنرى كمية البروتين.
+    <strong>سادساً: تقييم الجنين -</strong> 👶 حركة الجنين، نبض الجنين، السونار، Doppler.
+  </div>
+
+  <div class="card">
+    <strong>التحاليل:</strong> 🩸 CBC | 🫘 وظائف الكلى | 🫀 وظائف الكبد | ⚡ Electrolytes.
+  </div>
+
+  <div class="card">
+    <strong>💊 الأدوية:</strong>
+    <p><strong>Methyldopa:</strong> للحالات الخفيفة والمتوسطة. آمن نسبياً أثناء الحمل.</p>
+    <p><strong>Nifedipine:</strong> عندما يصبح الضغط مرتفعاً جداً. من Calcium Channel Blockers. يرخي العضلات في جدران الأوعية فتتوسع وينخفض الضغط.</p>
+    <p><strong>Aspirin:</strong> يُعطى للنساء عاليّات الخطورة للوقاية من تطور تسمم الحمل، بجرعات منخفضة وتحت إشراف طبي.</p>
+  </div>
+
+  <div class="card">
+    <strong>🏥 أثناء الولادة:</strong>
+    <p>👩‍⚕️ لا تترك المريضة وحدها. لماذا؟ لأنها قد تتحول إلى Eclampsia خلال دقائق.</p>
+    <p>مراقبة العلامات الحيوية: الضغط كل 15-20 دقيقة إذا كانت الحالة شديدة. الأكسجين كل ساعة.</p>
+    <p>مراقبة السوائل: وهذا مهم جداً. لأنها إذا أخذت سوائل قليلة... ستنخفض تروية الكلى أكثر. وإذا أخذت سوائل كثيرة... قد تمتلئ الرئتان بالماء.</p>
+    <p>لماذا نضع Foley Catheter؟ حتى نقيس البول كل ساعة. لأن انخفاض البول أول علامة على أن الكلى بدأت تتأذى.</p>
+    <p style="margin-top:12px;">لماذا قد نلجأ للقيصرية؟ لأن العلاج الوحيد الحقيقي للمرض هو... 🥁 ولادة الجنين والمشيمة. المشكلة بدأت من المشيمة. بمجرد خروجها... يبدأ المرض بالتحسن تدريجياً.</p>
+    <p style="font-weight:700;">The only definitive treatment is delivery.</p>
+    <p style="margin-top:12px;">بعد الولادة: هل انتهى الخطر؟ للأسف ❌ لا. قد تحدث Eclampsia حتى بعد الولادة. لهذا تستمر المراقبة أول 24 ساعة على الأقل.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الفصل الرابع: ECLAMPSIA -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#dc2626,#991b1b);">🎬</div>
+    🎬 الفصل الرابع: عندما تنفجر القصة... ECLAMPSIA
+  </div>
+  <div class="card">
+    <p>تذكري: كل Eclampsia تبدأ بـ Preeclampsia. لكن ليس كل Preeclampsia تصبح Eclampsia.</p>
+    <p style="margin-top:12px;">ما الفرق؟ الفرق كلمة واحدة فقط...</p>
+    <p style="font-weight:700;">Seizure (التشنجات)</p>
+    <p>بمجرد أن تبدأ الحامل المصابة بـ Preeclampsia بالتشنج... نقول: "أصبحت Eclampsia."</p>
+  </div>
+
+  <div class="card">
+    <strong>🚨 ماذا نفعل أولاً؟</strong>
+    <p>ليس إعطاء الدواء. ليس قياس الضغط. أول شيء دائماً... <strong>ABC</strong></p>
+    <p>A → Airway: هل مجرى التنفس مفتوح؟</p>
+    <p>B → Breathing: هل تتنفس؟ هل تحتاج أكسجين؟</p>
+    <p>C → Circulation: هل النبض جيد؟ هل الضغط موجود؟</p>
+    <p style="font-weight:700;">دائماً... ABC قبل أي شيء.</p>
+  </div>
+
+  <div class="card">
+    <strong>لماذا نضعها على الجانب الأيسر؟ Left Lateral Position</strong>
+    <p>لسببين. الأول: حتى لا يدخل القيء إلى الرئة فتختنق. الثاني: الرحم الكبير لا يضغط على الوريد الأجوف السفلي. فيتحسن رجوع الدم للقلب ويتحسن وصول الدم للمشيمة.</p>
+    <p style="margin-top:12px;"><strong>لماذا الغرفة تكون هادئة ومظلمة؟</strong> لأن الدماغ أصبح شديد الحساسية. أي صوت أو ضوء أو إزعاج قد يحفز تشنجاً جديداً.</p>
+    <p style="margin-top:12px;"><strong>لماذا نعطي الأكسجين؟</strong> لأن أثناء التشنج... الأم لا تتنفس جيداً. والجنين أيضاً يحرم من الأكسجين.</p>
+    <p style="margin-top:12px;"><strong>لماذا نضع Foley Catheter؟</strong> لأن Magnesium Sulfate يخرج عن طريق الكلى. إذا توقفت الكلى... سيتراكم الدواء ويتحول من علاج... إلى سم قاتل.</p>
+  </div>
+
+  <!-- Magnesium Sulfate -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">✨</div>
+    ✨ بطل القصة الحقيقي: Magnesium Sulfate
+  </div>
+  <div class="card">
+    <p>احفظيها كأنها اسمك. لأنها أكثر سؤال يتكرر.</p>
+    <p style="margin-top:12px;">هل يخفض الضغط؟ ❌ لا.</p>
+    <p>هل يعالج المرض؟ ❌ لا.</p>
+    <p>هل يوقف التشنجات ويمنع حدوثها؟ ✅ نعم.</p>
+    <p style="margin-top:12px;">لهذا يسمى: <strong>Drug of Choice.</strong></p>
+    <p style="margin-top:12px;">كيف يعمل؟ يقوم بتهدئة الجهاز العصبي ويقلل انتقال الإشارات العصبية. فتصبح الأعصاب أقل قابلية لإطلاق التشنجات.</p>
+  </div>
+
+  <!-- قبل كل جرعة -->
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <strong>🦵 قبل كل جرعة... الممرضة يجب أن تتأكد من 3 أشياء:</strong>
+    <p style="margin-top:12px;"><strong>أولاً: Knee Jerk موجود.</strong> لماذا؟ لأن أول علامة لتسمم Magnesium... اختفاء المنعكسات.</p>
+    <p><strong>ثانياً: Respiratory Rate ≥16/min.</strong> إذا أصبح أقل... توقفي.</p>
+    <p><strong>ثالثاً: Urine Output >30 ml/hour.</strong> إذا أصبح أقل... لا تعطي الجرعة التالية.</p>
+    <p style="margin-top:12px;">لماذا؟ لأن الدواء يخرج عن طريق البول. إذا البول توقف... الدواء سيتجمع في الجسم.</p>
+  </div>
+
+  <!-- Magnesium Toxicity -->
+  <div class="card" style="border-color:#fca5a5; background:#fff5f5;">
+    <strong>⚠️ علامات Magnesium Toxicity:</strong>
+    <p>🚨 اختفاء Knee Jerk | 🚨 قلة البول | 🚨 بطء التنفس | 🚨 Respiratory Depression | 🚨 Respiratory Arrest.</p>
+    <p style="margin-top:12px;"><strong>سؤال الامتحان الأشهر: ما هو Antidote؟</strong></p>
+    <p>❤️ <strong>Calcium Gluconate.</strong> احفظيها للأبد.</p>
+    <p>Magnesium ↑ ⬇️ Calcium Gluconate.</p>
+  </div>
+
+  <!-- HELLP Syndrome -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">🧪</div>
+    HELLP Syndrome
+  </div>
+  <div class="card">
+    <p>هذا الاسم يبدو لطيفاً... لكن الحقيقة أنه من أخطر مضاعفات الحمل. 😑</p>
+    <p style="margin-top:12px;"><strong>H</strong> = Hemolysis (تكسر كريات الدم الحمراء)</p>
+    <p><strong>EL</strong> = Elevated Liver Enzymes (الكبد يتأذى وترتفع إنزيماته)</p>
+    <p><strong>LP</strong> = Low Platelets (الصفائح تنخفض فتزداد قابلية النزيف)</p>
+    <p style="margin-top:12px;">إذن المريضة أصبحت عندها ثلاث مصائب معاً: 🩸 الدم يتكسر | 🫀 الكبد يتلف | 🩹 الصفائح تقل. ولهذا قد تدخل في: DIC / Renal Failure / Pulmonary Edema. وقد تموت إذا لم تُعالج بسرعة.</p>
+  </div>
+
+  <!-- المضاعفات -->
+  <div class="grid-2col">
+    <div class="card" style="border-color:#fca5a5;">
+      <strong>💔 مضاعفات على الأم</strong>
+      <p>🧠 Cerebral Hemorrhage | 🫀 Heart Failure | 🫘 Renal Failure | 🫀 Liver Failure | 🩸 DIC | 👶 Abruptio Placentae | ⚡ Eclampsia.</p>
+    </div>
+    <div class="card" style="border-color:#93c5fd;">
+      <strong>💔 مضاعفات على الجنين</strong>
+      <p>👶 IUGR | 👶 نقص الأكسجين | 👶 الولادة المبكرة | 👶 وفاة داخل الرحم | 👶 وفاة بعد الولادة.</p>
+    </div>
+  </div>
+
+  <!-- Nursing Diagnoses -->
+  <div class="card">
+    <strong>📋 Nursing Diagnoses:</strong>
+    <p>إذا كانت الأم تتشنج... ➡️ Risk for Aspiration.</p>
+    <p>إذا الضغط مرتفع... ➡️ Risk for Fetal Injury.</p>
+    <p>إذا بالمستشفى... ➡️ Anxiety.</p>
+    <p>إذا عندها Catheter وأدوية... ➡️ Risk for Infection.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- الخلاصة الذهبية -->
+  <div class="sec-title">
+    <div class="icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">🌸</div>
+    🌸 الخلاصة الذهبية
+  </div>
+  <div class="card" style="border-color:#fcd34d; background:#fffdf5;">
+    <p>احفظي القصة بهذا التسلسل:</p>
+    <p style="margin-top:12px;"><strong>PIH</strong> ⬇️ ضغط فقط أثناء الحمل.</p>
+    <p><strong>Gestational Hypertension</strong> ⬇️ ضغط بدون بروتين.</p>
+    <p><strong>Preeclampsia</strong> ⬇️ ضغط + بروتين + تأثر أعضاء.</p>
+    <p><strong>Severe Preeclampsia</strong> ⬇️ ضغط شديد + صداع + زغللة + ألم أعلى البطن + قلة بول + نقص صفائح...</p>
+    <p><strong>Eclampsia</strong> ⬇️ ظهور التشنجات.</p>
+    <p><strong>HELLP</strong> ⬇️ تكسر دم + ارتفاع إنزيمات الكبد + نقص الصفائح.</p>
+    <p style="margin-top:12px;">ثم العلاج الذي لا يغيب عن بالك:</p>
+    <p>🩺 خفض الضغط بالأدوية المناسبة.</p>
+    <p>💉 Magnesium Sulfate لمنع وعلاج التشنجات.</p>
+    <p>🧪 مراقبة Knee Jerk + Respiratory Rate + Urine Output قبل كل جرعة.</p>
+    <p>💊 إذا ظهر تسمم المغنيسيوم: Calcium Gluconate.</p>
+    <p>👶 والعلاج النهائي الذي يزيل سبب المرض هو ولادة الجنين والمشيمة.</p>
+  </div>
+
+  <div class="divider"></div>
+  <p style="text-align:center; color:var(--muted); margin-top:24px;">🌸 وهكذا نكون قد أنهينا قصة اضطرابات ضغط الدم أثناء الحمل كاملة. 👑</p>
+
+</div>
+</body>
+</html>
